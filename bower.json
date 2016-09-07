@@ -1,0 +1,22 @@
+{
+  "name": "nearsoft-jobs",
+  "description": "Nearsoft Jobs Website",
+  "main": "app.js",
+  "authors": [
+    "Jorge Chavez <jorge_clan8@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.3",
+    "font-awesome": "^4.6.3"
+  }
+}

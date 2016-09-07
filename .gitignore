@@ -1,0 +1,5 @@
+.DS_Store
+.sass-cache
+public/dist
+node_modules
+public/vendor
