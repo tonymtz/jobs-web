@@ -5,6 +5,10 @@ $light-orange-color: #f19d80
 $gray-black: #d2d2d0
 $light-orange-color-hover: #bd6d52
 
+$break-small: 500px
+$break-medium: 900px
+$break-large: 1200px
+
 //Reset
 *
   box-sizing: border-box
@@ -101,3 +105,29 @@ $light-orange-color-hover: #bd6d52
           display: block
         &.third
           width: 33.33%
+
+
+@media screen and (max-width: $break-medium)
+  .footer
+    .wrapper-12
+      padding: 20px 0px
+      .wrap-stripe
+        width: 100%
+        text-align: center
+        .stripe
+          width: 100%
+          position: relative
+          padding: 10px 0px
+          a
+            display: inline-block
+            margin: 0 auto
+            img
+              width: 100px
+              margin-bottom: 0
+      .wrap-blocks
+        width: 100%
+        text-align: center
+        padding: 0
+        .block
+          &.third
+            width: 100%
