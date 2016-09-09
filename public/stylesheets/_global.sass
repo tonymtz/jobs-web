@@ -3,6 +3,7 @@
 $gray-color: #e0e0df
 $light-orange-color: #f19d80
 $gray-black: #d2d2d0
+$orange-color: #EA613E
 $light-orange-color-hover: #bd6d52
 
 $break-small: 500px
@@ -18,6 +19,68 @@ $break-large: 1200px
   &.wrapper-12
     width: 90%
     max-width: 1280px
+
+.top-menu
+  background-color: rgba(255,255,255,0.9)
+  padding: 20px 0px
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  .wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+  .right-top-menu
+    align-self: center
+    img
+      height: 40px
+      &:hover
+        opacity: 0.8
+    .ham-button
+      width: 30px
+      height: 30px
+      display: inline-block
+      vertical-align: middle
+      margin-left: 10px
+      &:hover
+        .wrap-lines
+          .line
+            &:nth-child(2)
+              transform: translateX(0px)
+              &:after
+                transform: translateX(120%) translateY(-15px)
+      .wrap-lines
+        display: flex
+        flex-direction: column
+        align-content: space-around
+        justify-content: space-between
+        height: 100%
+        overflow: hidden
+        .line
+          height: 3px
+          background-color: $orange-color
+          width: 100%
+          border-radius: 3px
+          &:nth-child(2)
+            transform: translateX(-25px)
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1)
+            &:after
+              height: 3px
+              background-color: $orange-color
+              width: 100%
+              border-radius: 3px
+              content: ""
+              transform: translateX(35px) translateY(-15px)
+              display: inline-block
+              transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1)
+
+
+  .left-top-menu
+    margin-right: auto
+    img
+      width: 200px
+
 
 .footer
   background-color: $gray-color
