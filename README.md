@@ -11,6 +11,15 @@ This is the official website of NS Jobs.
   `npm install`
 
   `bower install`
+  
+*Also, you have to install the grunt command line interface
+  `npm install -g grunt-cli`
+
+* you need to have ruby installed 
+  verify it with `ruby --version` 
+
+*and you need to install the Saas gem  
+  `gem install sass`
 
 
 ## grunt
