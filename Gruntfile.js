@@ -38,7 +38,7 @@ module.exports = function(grunt) {
       scripts: {
         files: ['**/*.js', '**/*.sass'],
         tasks: ['build'],
-        options: {          
+        options: {
           spawn: true,
           livereload: {
             host: 'localhost',

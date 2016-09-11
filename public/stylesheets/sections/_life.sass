@@ -1,0 +1,150 @@
+.life-header
+  margin-top: 96px
+  border-top: 1px solid $orange-color
+  border-bottom: 1px solid $orange-color
+  padding: 0 100px 100px 100px
+  text-align: center
+  h1
+    .small-text
+      color: $orange-color
+      font-size: 77px
+      display: inline-block
+      transform: translate3d(75px, 45px, 0px)
+    .big-text
+      font-size: 350px
+      color: $dark-blue-color
+      font-weight: bold
+      display: block
+      line-height: 235px
+
+.inside-culture
+  padding: 50px 0px
+  .big-title
+    border: 5px solid black
+    font-size: 67px
+    padding: 10px
+    font-weight: bold
+    line-height: 67px
+    margin: 0
+    display: inline-block
+  .wrap-blocks
+    .block
+      padding: 20px
+      font-size: 20px
+      display: inline-block
+      color: white
+  .medium-post
+    padding-bottom: 100px
+    .wrap-blocks
+      border: 5px solid $dark-blue-color
+      padding: 20px
+      background-color: $dark-blue-color-2
+    .big-title
+      color: $dark-blue-color
+      border-color: $dark-blue-color
+      transform: translateY(5px)
+      padding-bottom: 10px
+      span
+        display: block
+  .benefits
+    padding: 100px 0px
+    .block
+      &:nth-child(1)
+        background-color: $orange-color
+      &:nth-child(2)
+        background-color: $orange-color-3
+      &.half
+        width: 50%
+    .wrap-title
+      text-align: center
+      .big-title
+        border-color: $orange-color-2
+        color: $orange-color-2
+  .inside-photo
+    margin-top: 40px
+    .wrap-text
+      text-align: right
+      p
+        background-color: $white-gray-color
+        width: 40%
+        display: inline-block
+        padding: 20px
+        line-height: 25px
+        font-size: 20px
+    .wrap-title
+      border-bottom: 10px solid $orange-color
+      display: inline-block
+    .big-photo
+      height: 500px
+      padding-top: 20px
+    .title-inside
+      color: $orange-color
+      font-size: 67px
+      line-height: 67px
+      padding-bottom: 5px
+      padding-left: 20px
+      span
+        display: block
+        font-weight: bold
+  .row-photo
+    &:hover
+      .photo-small
+        width: 32%
+      .photo-large
+        width: 68%
+  .photos
+    .photo-large
+      width: 70%
+    .photo-small
+      width: 30%
+    .photo
+      display: inline-block
+      padding: 2px 5px
+      .fill-photo
+        height: 300px
+  .nice-paragraph
+    font-size: 20px
+    text-align: center
+    padding: 10px 0px
+
+@media screen and (max-width: $break-medium)
+  .inside-culture
+    .medium-post
+      padding-bottom: 0px
+    .wrap-title
+      width: 100%
+      .big-title
+        width: 100%
+        text-align: center
+        font-size: 40px
+    .benefits
+      .wrap-blocks
+        .block
+          &.half
+            width: 100%
+    .inside-photo
+      .wrap-text
+        p
+          width: 100%
+          text-align: center
+      .big-photo
+        height: 400px
+    .photos
+      .row-photo
+        &:hover
+          .photo-small
+            width: 100%
+          .photo-large
+            width: 100%
+      .photo
+        width: 100%
+  .life-header
+    padding: 50px 0 50px 0
+    h1
+      .small-text
+        font-size: 50px
+        transform: translate3d(0, 0, 0)
+        line-height: 50px
+      .big-text
+        font-size: 100px
+        line-height: 100px
