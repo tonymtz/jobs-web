@@ -1,4 +1,69 @@
 extends ../layout
 
 block content
-  h1 NEARSOFT HOME  
+  header.home-header
+    div.squares
+      div.row-square
+        div.half          
+        div.half
+          a(href="life" class="square square-type-1 pull-down")
+            span.in-text
+              | LIFE <br />
+              | AT NS              
+      div.row-square
+        div.half
+          a(href="who-we-are" class="square square-type-2 pull-down")
+            span.in-text
+              | THIS IS WHO WE ARE
+        div.half  
+          a(href="open-position" class="square square-type-3 pull-center")
+            span.in-text
+              | OPEN <br />
+              | POSITIONS
+      div.row-square
+        div.half.vt
+          a(href="community" class="square square-type-5 rect pull-down")
+            span.in-text
+              | NS COMMUNITY
+          a(href="labs" class="square square-type-6 pull-center")
+            span.in-text
+              | LABS
+        div.half  
+          a(href="internship" class="square square-type-4 pull-center")
+            span.in-text
+              | INTERN <br />
+              | SHIPS
+    div.mask.extend
+    div.video      
+      video(autoplay muted loop)
+        source(src="files/video_loop.mp4")
+      //- iframe(src="https://www.youtube.com/embed/DlLHc7CS914?autoplay=1&color=red&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen)    
+  section.home-bottom
+    div.wrapper.wrapper-12
+      div.center
+        h3.welcome Welcome to the Magic!
+      div.photos.news       
+        div.photo-small.block.block-type-2.left-type
+          div.title-inside.title-inside-white
+            span News
+        div(class="photo-large coverimage block" style="background-image: url('images/photo_6.jpg')")
+      div.ns-places
+        div.map           
+        div.title-places
+          span Ns
+          span Places
+      div.photos.hmo
+        div(class="photo-large coverimage block" style="background-image: url('images/photo_7.png')")
+        div.photo-small.block.block-type-1.right-type
+          div.title-inside.title-inside-white
+            span HMO
+      div.photos.cuu
+        div.photo-small.block.block-type-2.left-type
+          div.title-inside.title-inside-white
+            span CUU
+        div(class="photo-large coverimage block" style="background-image: url('images/photo_6.jpg')")
+      div.photos.labs
+        div(class="photo-large coverimage block" style="background-image: url('images/photo_8.jpg')")
+        div.photo-small.block.block-type-1.right-type
+          div.title-inside.title-inside-white
+            span CDMX
