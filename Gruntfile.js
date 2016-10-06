@@ -50,7 +50,7 @@ module.exports = function(grunt) {
   });
 
   // Sass task
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
 
   // Default task(s).
   grunt.registerTask('default', ['build', 'watch']);
