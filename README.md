@@ -5,12 +5,10 @@
 ## Setup
 
 * Clone the repository
-* Install Ruby (e.g. using [`rbenv`](https://github.com/rbenv/rbenv))
 * Install Node.js (e.g. using [`nodenv`](https://github.com/nodenv/nodenv))
 * Install dependencies:
 
 ```bash
-gem install sass     # install sass
 npm install          # install npm dependencies
 npm install -g bower # install bower globally
 bower install        # install bower dependencies
