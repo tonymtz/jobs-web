@@ -1,4 +1,39 @@
 extends ../layout
 
 block content
-  h1 NEARSOFT POSITIONS  
+  header.position-header
+    div.wrapper
+      h1(class="position-title" style="background-image: url('images/open-positions.png')")
+        span.show-for-sr OPEN POSITIONS
+        span.show-for-sr We want you
+
+  section.we-want-you
+    div.wrapper.wrapper-8
+      p Nuestro equipo está siempre buscando a nuevos integrantes que puedan compartir con nosotros nuestros valores y hacer realidad la visión que perseguimos. Por lo mismo, constantemente estamos abriendo oportunidades para convertirse en un Nearsoftian.
+      p El proceso no es sencillo, debemos confesar, pero una vez que formes parte del team, te darás cuenta que habrá valido la pena.
+
+  section.requirements
+    div.wrapper
+      div.requirements-section.profiles
+        div.profiles-container
+          span OP Profiles &
+          span.bold Requirements
+      div.requirements-section.github
+        a(style="background-image: url('images/github.png')")
+          div.github-container
+            span Consulta nuestras 
+            span vacantes en
+
+  section.our-hiring-process
+    div.wrapper.wrapper-10
+      h2
+        span.sub Our hiring
+        span Process
+
+      div(class="our-hiring-process-icons" style="background-image: url('images/icons.png')")
+
+  section.our-recruiting-team
+    div.wrapper.wrapper-10
+      h2 Our recruiting team
+
+      div(class="our-recruiting-team-img" style="background-image: url('images/recruiters.png')")
