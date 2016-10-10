@@ -1,48 +1,146 @@
 extends ../layout
 
 block content
-  header.life-header
+  header#life-header.coverimage.stretch-height.nice-scroll-img
+    .wrapper.wrapper-12
+      div.wrap-box-title
+        h1.how-title
+          span.small-text HOW WE
+          span.big-text Work
+  div.wrapper.wrapper-10
     div.wrapper.wrapper-12
-      h1
-        span.small-text HOW WE
-        span.big-text Work
-  section.inside-culture
-    div.wrapper.wrapper-8
-      p.nice-paragraph No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual.
-    div.wrapper.wrapper-12
-      div.photos
-        div.row-photo
-          div(class="photo-large animation photo")
-            div(class="fill-photo coverimage" style="background-image: url('images/photo_1.png')")
-          div(class="photo-small animation photo")
-            div(class="fill-photo coverimage"  style="background-image: url('images/photo_2.png')")
-        div.row-photo
-          div(class="photo-small animation photo")
-            div(class="fill-photo coverimage"  style="background-image: url('images/photo_3.png')")
-          div(class="photo-large animation photo")
-            div(class="fill-photo coverimage" style="background-image: url('images/photo_4.png')")
-      div.inside-photo
-        div(class="big-photo coverimage" style="background-image: url('images/photo_5.png')")
-          div.wrap-title
-            h2.title-inside.title-inside-orange Inside 
-              span NS Culture
-        div.wrap-text
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit., sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      div.benefits
-        div.wrapper.wrapper-12
-          div.wrap-title
-            h4.big-title Benefits
-          div.wrap-blocks.center-blocks
-            div.block.half
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            div.block.half
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      div.medium-post
-        div.wrapper.wrapper-12
-          div.wrap-title
-            h4.big-title
-              span Medium
-              span Post
-          div.wrap-blocks
-            div.block
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      div.nice-paragraph
+        p Somos una
+          | <strong>empresa democrática</strong>, con una        
+          | <strong>estructura horizontal</strong>
+          | conformada por “equipos auto dirigidos”, 
+          | <strong> sin managers </strong>
+          | , ni jefes y nuestras evaluaciones, son 
+          | <strong>assessments hechos por nuestro propio equipo.</strong>
+    
+    div.inside
+      div.center
+        h2 Inside NS culture
+      div.row-icons.st-orange
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_11.png" alt="Games room icon")
+          span.title-item Games Room
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_12.png" alt="Pizza icon")
+          span.title-item Pizza Lovers
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_13.png" alt="Bookworms icon")
+          span.title-item Bookworms
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_14.png" alt="Weekly workshops icon")
+          span.title-item Weekly workshops
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_15.png" alt="All hands icon")
+          span.title-item All hands on meeting
+      div.row-icons.st-bluegray
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_1.png" alt="Star wars icon")
+          span.title-item Star Wars Fans
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_2.png" alt="Carne asada icon")
+          span.title-item Carne Asada enthusiasts
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_3.png" alt="Leadership icon")
+          span.title-item Leadership Teams
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_4.png" alt="Cooking fridays icon")
+          span.title-item Cooking Fridays
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_5.png" alt="Awards icon")
+          span.title-item Awards &amp; Recognition
+      div.row-icons.st-orange
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_6.png" alt="Spanglish icon")
+          span.title-item Spanglish experts
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_7.png" alt="Party icon")
+          span.title-item Party animals
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_8.png" alt="Talks icon")
+          span.title-item Talks &amp; Open Communication
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_9.png" alt="Beer icon")
+          span.title-item Beer Conoisseurs
+        div.icon-item
+          div.icon-img
+            img(src="/images/icons/icon_10.png" alt="Gym icon")
+          span.title-item Gym junkies
+    div.benefits
+      div.title-square.block
+        span Beneﬁts
+      div.benefits-description.block
+        p Éstos son algunos de los beneficios o prestaciones que tenemos los que formamos parte del equipo:
+      div.dots
+        div.block.half
+          ul
+            li.dot
+              strong Career path.
+              | Tú decides hacia dónde quieres dirigir tu carrera y en dónde dejar tu huella dentro del equipo.
+            li.dot
+              strong Innovación.
+              | Crea y apoya proyectos surgidos en Nearsoft.
+            li.dot
+              strong Training
+              | con budget personalizado de capacitación (nacional/internacional).
+            li.dot
+              strong Budget ilimitado para libros.
+              | Puedes solicitar la compra de libros de capacitación o desarrollo profesional y personal.
+            li.dot
+              strong WFH. 
+              | Ten la oportunidad de trabajar desde tu casa cuando sea necesario.
+            li.dot
+              strong Reﬁll 
+              | para desayunar.
+        div.block.half   
+          ul
+            li.dot
+              strong 10 días de vacaciones
+              | que se pueden tomar desde el primer día.
+            li.dot
+              strong Seguro de gastos médicos mayores
+              | para los que formamos parte del team y su espos@ e hijos en común.
+            li.dot
+              strong Kids allowed
+            li.dot
+              strong Pet friendly,
+              | incluso tenemos nuestra propia Developet. 
+              a(href="https://www.youtube.com/watch?v=vmIPdLb-wxc" target="_blank") Conoce a Sansa.
+            li.dot
+              strong Cerveza y bebidas permitidas.
+            li.dot
+              strong No código de vestimenta.
+            li.dot
+              strong Horario ﬂexible.
+            li.dot
+              strong Espacios recreativos 
+              | dentro de las oficinas.
+    div.medium
+      div.des-medium.square
+        p Conoce a nuestros compañeros a través de sus palabras.
+        a(href="https://medium.com/nearsoft-jobs") Visita nuestro blog <i class='fa fa-arrow-right'></i>
+      div.img-medium.coverimage
+        div.title-medium
+          h3 Medium <span>Post</span>
+          
+      
+      
+    

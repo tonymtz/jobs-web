@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  header.home-header
+  header.home-header.stretch-height-with
     div.squares
       div.row-square
         div.half          
@@ -33,9 +33,9 @@ block content
             span.in-text
               | INTERN <br />
               | SHIPS
-    div.mask.extend
-    div.video      
-      video(autoplay muted loop)
+    div.mask.extend.stretch-height-with
+    div.video   
+      video(autoplay muted loop class="stretch-height-with")
         source(src="files/video_loop.mp4")
       //- iframe(src="https://www.youtube.com/embed/DlLHc7CS914?autoplay=1&color=red&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen)    
   section.home-bottom

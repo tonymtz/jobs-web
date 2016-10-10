@@ -1,137 +1,215 @@
-.life-header
+#life-header
   margin-top: 96px
   border-top: 1px solid $orange-color
-  border-bottom: 1px solid $orange-color
-  padding: 0 100px 100px 100px
-  text-align: center
-  h1
-    .small-text
+  background-image: url('../images/photo_10.png')
+  background-attachment: fixed
+  background-position-y: -100px
+  height: 500px
+  .wrap-box-title
+    border-bottom: 10px solid $orange-color
+    width: 30%
+    margin-top: 50px
+    position: relative
+    padding-bottom: 20px
+    .how-title
       color: $orange-color
-      font-size: 77px
-      display: inline-block
-      transform: translate3d(75px, 45px, 0px)
-    .big-text
-      font-size: 350px
-      color: $dark-blue-color
-      font-weight: bold
-      display: block
-      line-height: 235px
-
-.inside-culture
-  padding: 50px 0px
-  .big-title
-    border: 5px solid black
-    font-size: 67px
-    padding: 10px
-    font-weight: bold
-    line-height: 67px
-    margin: 0
-    display: inline-block
-  .wrap-blocks
-    .block
-      padding: 20px
-      font-size: 20px
-      display: inline-block
-      color: white
-  .medium-post
-    padding-bottom: 100px
-    .wrap-blocks
-      border: 5px solid $dark-blue-color
-      padding: 20px
-      background-color: $dark-blue-color-2
-    .big-title
-      color: $dark-blue-color
-      border-color: $dark-blue-color
-      transform: translateY(5px)
-      padding-bottom: 10px
       span
         display: block
-  .benefits
-    padding: 100px 0px
-    .block
-      &:nth-child(1)
-        background-color: $orange-color
-      &:nth-child(2)
-        background-color: $orange-color-3
-      &.half
-        width: 50%
-    .wrap-title
-      text-align: center
-      .big-title
-        border-color: $orange-color-2
+        &.big-text
+          font-size: 150px
+          font-weight: bold
+          line-height: 120px
+        &.small-text
+          font-size: 30px
+
+          text-align: center
+          position: relative
+          top: 30px
+          left: 20px
+
+.nice-paragraph
+  font-size: 24px
+  color: $dark-blue-color
+  margin: 80px
+  margin-bottom: 40px
+  &::after
+    content: ""
+    display: block
+    width: 70%
+    border-bottom: 1px solid $orange-color
+    margin: 0px auto
+    margin-top: 80px
+
+.inside
+  .center
+    margin-bottom: 40px
+    h2
+      color: $orange-color
+      font-size: 40px
+      margin: 0
+  .st-bluegray
+    .icon-item
+      &:nth-child(odd)
+        color: $dark-blue-color-2
+      &:nth-child(even)
         color: $orange-color-2
-  .inside-photo
-    margin-top: 40px
-    .wrap-text
-      text-align: right
-      p
-        background-color: $white-gray-color
-        width: 40%
-        display: inline-block
-        padding: 20px
-        line-height: 25px
-        font-size: 20px
-    .wrap-title
-      border-bottom: 10px solid $orange-color
+  .st-orange
+    .icon-item
+      &:nth-child(even)
+        color: $dark-blue-color-2
+      &:nth-child(odd)
+        color: $orange-color-2
+  .row-icons
+    margin: 50px 0px
+    display: block
+    .icon-item
+      width: 20%
       display: inline-block
-    .big-photo
-      height: 500px
-      padding-top: 20px    
-  .row-photo
-    &:hover
-      .photo-small
-        width: 32%
-      .photo-large
-        width: 68%
-  .photos
-    .photo
-      display: inline-block
-      padding: 2px 5px
-      .fill-photo
-        height: 300px
-  .nice-paragraph
-    font-size: 20px
+      text-align: center
+      vertical-align: top
+      .icon-img
+        min-height: 100px
+      img
+        max-height: 100px
+      .title-item
+        display: block
+        font-weight: bold
+        font-size: 22px
+        margin-top: 20px
+.block
+  display: inline-block
+  vertical-align: middle
+
+.benefits
+  margin: 100px 0px
+  .title-square
+    padding: 10px
+    border: 7px solid $orange-color
+    width: 30%
+    font-size: 57px
+    line-height: 50px
     text-align: center
-    padding: 10px 0px
+    color: $orange-color
+    font-weight: bold
+  .benefits-description
+    width: 70%
+    padding: 0 20px
+    font-size: 18px
+    color: $orange-color
+  .dots
+    color: white
+    display: flex
+    .block
+      padding: 25px
+      &:first-child
+        background-color: $orange-color-2
+      &:last-child
+        background-color: $orange-color-3
+    .half
+      width: 50%
+    .dot
+      font-size: 20px
+      line-height: 28px
+      margin: 20px 0px
+      a
+        color: white
+        text-decoration: underline
+      &:first-child
+        margin-top: 0
+      &:last-child
+        margin-bottom: 0
+
+.medium
+  margin: 70px 0px
+  margin-bottom: 150px
+  display: flex
+  .img-medium
+    width: 70%
+    background-image: url('../images/photo_9.png')
+    display: flex
+    .title-medium
+      color: white
+      width: 35%
+      background-color: rgba(0,0,0,0.2)
+      padding: 10px
+      margin-left: auto
+      display: flex
+      h3
+        font-size: 57px
+        line-height: 57px
+        font-weight: bold
+        align-self: center
+      span
+        display: block
+  .des-medium
+    padding: 15px
+    border: 5px solid $dark-blue-color
+    width: 30%
+    font-size: 27px
+    p
+      color: $orange-color
+      line-height: 30px
+    a
+      color: $orange-color
+      margin-top: 30px
+      display: inline-block
+    i
+
 
 @media screen and (max-width: $break-medium)
-  .inside-culture
-    .medium-post
-      padding-bottom: 0px
-    .wrap-title
+  .medium
+    .img-medium
+      .title-medium
+        width: 60%
+  .benefits
+    .benefits-description
+      width: 50%
+    .title-square
+      width: 50%
+      vertical-align: bottom
+  .inside
+    .row-icons
+      .icon-item
+        width: 50%
+        margin: 15px 0px
+
+@media screen and (max-width: $break-small)
+  .medium
+    display: block
+    .img-medium
+      display: block
       width: 100%
-      .big-title
+      .title-medium
         width: 100%
-        text-align: center
-        font-size: 40px
-    .benefits
-      .wrap-blocks
-        .block
-          &.half
-            width: 100%
-    .inside-photo
-      .wrap-text
-        p
-          width: 100%
+    .des-medium
+      width: 100%
+  .benefits
+    .title-square
+      width: 100%
+    .dots
+      display: block
+      .half
+        width: 100%
+  .inside
+    .center
+      margin-top: 30px
+    .row-icons
+      .icon-item
+        width: 50%
+        margin: 10px auto
+  .nice-paragraph
+    margin: 0px
+    padding-top: 20px
+  #life-header
+    display: flex
+    align-items: center
+    justify-content: center
+    .wrap-box-title
+      width: 100%
+      .how-title
+        span
           text-align: center
-      .big-photo
-        height: 400px
-    .photos
-      .row-photo
-        &:hover
-          .photo-small
-            width: 100%
-          .photo-large
-            width: 100%
-      .photo
-        width: 100%
-  .life-header
-    padding: 50px 0 50px 0
-    h1
-      .small-text
-        font-size: 50px
-        transform: translate3d(0, 0, 0)
-        line-height: 50px
-      .big-text
-        font-size: 100px
-        line-height: 100px
+          &.small-text
+            position: inherit
+          &.big-text
+            font-size: 80px
