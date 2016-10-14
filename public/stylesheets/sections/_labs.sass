@@ -33,22 +33,21 @@
 .news-top
   div
     display: inline-flex
+  .news-search
+    display: none
+    input
+      width: 98%
+      float: right
+      background-color: $gray-color
+      border: none
 
-.news-search
-
-  input
-    width: 98%
-    float: right
-    background-color: $gray-color
-    border: none
-
-  ::-webkit-input-placeholder
-    color: $dark-blue-color
-  .news-icon-wrapper
-    .search-icon
-      position: relative
-      max-height: 50px
-      max-width: 50px
+    ::-webkit-input-placeholder
+      color: $dark-blue-color
+    .news-icon-wrapper
+      .search-icon
+        position: relative
+        max-height: 50px
+        max-width: 50px
 
 .news-content
 
@@ -136,7 +135,11 @@
     position: absolute
     margin-left: -20px
 
-  li:hover
+  a
+    color: white
+    font-weight: bold
+
+  a:hover
     text-decoration: underline
     color: $orange-color
 
