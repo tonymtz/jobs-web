@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var env = require('../config/env');
-
 var YouTube = require('youtube-node');
-
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -37,11 +35,15 @@ router.get('/open-position', function(req, res, next) {
 router.get('/who-we-are', function(req, res, next) {
 
   var youTube = new YouTube();
+  console.log(env.YOUTUBE_API_KEY);
   youTube.setKey(env.YOUTUBE_API_KEY);
-
   youTube.getPlayListsItemsById(env.YOUTUBE_LIST_ID, function(err, response) {
-    console.log(response.items[0].snippet.thumbnails);
-    res.render('pages/who', { title: 'Nearsoft This is Who We Are', videos: response.items });
+    console.log(err);
+    if(err){
+      res.render("error", {error: err});
+    }else {
+      res.render('pages/who', { title: 'Nearsoft This is Who We Are', videos: response.items });
+    }
   });
 });
 

@@ -59,7 +59,7 @@ block content
       ul.list-videos
         each video, i in videos
           li
-            a(href="#" style="background-image: url('#{video.snippet.thumbnails.standard.url}')" class="coverimage wrap-img")
+            a(href="https://www.youtube.com/watch?v=#{video.snippet.resourceId.videoId}" style="background-image: url('#{video.snippet.thumbnails.standard.url}')" class="coverimage wrap-img")
               div.mask
                 i.fa.fa-play            
               strong #{video.snippet.title}          
