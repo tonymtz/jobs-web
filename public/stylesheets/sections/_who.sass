@@ -98,10 +98,35 @@
       padding: 5px
       width: 20%
       vertical-align: top
-      strong
-        color: $dark-blue-color
-        margin-top: 5px
+      .wrap-img
+        height: 150px
+        position: relative
         display: block
+        &:hover
+          .mask
+            background-color: rgba(0,0,0,0.3)
+            i
+              opacity: 1
+          strong
+            color: $orange-color
+        .mask
+          width: 100%
+          overflow: hidden
+          height: 100%
+          background-color: rgba(0,0,0,0)
+          display: flex
+          justify-content: center
+          align-items: center
+          color: white
+          font-size: 40px
+          transition: all 0.2s ease
+          i
+            opacity: 0
+            transition: all 0.2s ease-in
+        strong
+          color: $dark-blue-color
+          margin-top: 5px
+          display: block
 
 .who-section
   margin: 120px 0px
