@@ -53,7 +53,7 @@
   .github
     background-color: #bdbdbd
 
-    a
+    &-link
       display: block
       height: 194px
       background-repeat: no-repeat
@@ -62,13 +62,38 @@
 
     &-container
       padding: 52px 25px
-      font-size: 50px
-      line-height: 1
+      font-family: $font-bebas
+      font-size: 39px
+      line-height: 1.2
       text-transform: uppercase
-      letter-spacing: -12.9px
+      letter-spacing: -1px
 
     span
       display: block
+
+@media screen and (max-width: 986px)
+.requirements
+  height: auto
+
+  &-section
+    width: 100%
+
+    .profiles
+      &-container
+        float: none
+
+    .github
+      background-color: #bdbdbd
+
+      &-link
+        background-position: right !important
+
+      &-container
+        text-align: right
+        padding-right: 192px
+        padding-left: 0
+
+
 
 .our-hiring-process
   padding-top: 90px
@@ -97,7 +122,56 @@
     background-size: 100%
     background-repeat: no-repeat
     width: 100%
+    max-width: 1075px
     height: 630px
+
+    &-item
+      display: none
+
+@media screen and (max-width: $break-medium)
+  .our-hiring-process
+    &-icons
+      background-image: none !important
+      text-align: center
+      height: auto
+
+      &-item
+        display: inline-block
+        width: 235px
+        height: 315px
+        margin: 0px 15px
+
+        &-1
+          background-position: -32px 0px
+          background-repeat: no-repeat
+
+        &-2
+          background-position: -250px 0px
+          background-repeat: no-repeat
+
+        &-3
+          background-position: -502px 0px
+          background-repeat: no-repeat
+
+        &-4
+          background-position: -765px 0px
+          background-repeat: no-repeat
+
+        &-5
+          background-position: -57px -285px
+          background-repeat: no-repeat
+
+        &-6
+          background-position: -316px -285px
+          background-repeat: no-repeat
+
+        &-7
+          background-position: -574px -285px
+          background-repeat: no-repeat
+
+        &-8
+          background-position: -795px -285px
+          background-repeat: no-repeat
 
 .our-recruiting-team
   padding-top: 2px
