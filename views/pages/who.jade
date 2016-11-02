@@ -1,4 +1,91 @@
 extends ../layout
 
 block content
-  h1 NEARSOFT WHO WE ARE
+  header#who-header
+    div.wrapper.wrapper-12
+      div.block
+        h1.nice-title-who THIS IS WHO WE ARE
+      div.block
+        div.center
+          img(src="images/blue_logo.png" alt="Blue Nearsoft logo")
+  
+  div.who-section
+    div.wrapper-left.wrapper-10
+      div.block.half
+        div.wrap-img
+          img(src="/images/cancun.png" alt="Team of Nearsoft")
+      div.block.half.wrap-text
+        div.center
+          h4 WHO
+        p Formamos parte de Nearsoft, una empresa que se dedica al desarrollo de software en partnership con empresas en Estados Unidos, con una cultura basada en la individualidad, libertad y responsabilidad de sus integrantes.
+  div.core-values
+    div.wrapper.wrapper-10
+      div.block.half
+        ul
+          li.item
+            h4 Core Values      
+          li.item
+            div.wrap-img.block
+              img(src="/images/icons/icon_16.png" alt="light icon" class="block")
+            div.wrap-text.block
+              span.big-text Be smart and get things done
+          li.item
+            div.wrap-img.block
+              img(src="/images/icons/icon_17.png" alt="Commitment icon" class="block")
+            div.wrap-text.block
+              span.big-text Commitment        
+          
+      div.block.half
+        ul
+          li.item
+            div.wrap-img.block
+              img(src="/images/icons/icon_18.png" alt="Relationship icon" class="block")
+            div.wrap-text.block
+              span.big-text Long term relationships
+          li.item
+            div.wrap-img.block
+              img(src="/images/icons/icon_19.png" alt="Teamwork icon" class="block")
+            div.wrap-text.block
+              span.big-text Teamwork
+          li.item
+            div.wrap-img.block
+              img(src="/images/icons/icon_20.png" alt="Leadership icon" class="block")
+            div.wrap-text.block
+              span.big-text Leadership
+  div.meet-us
+    div.wrapper.wrapper-12
+      div.center
+        h4 ¡Conócenos!
+      ul.list-videos
+        each video, i in videos
+          li
+            a(href="https://www.youtube.com/watch?v=#{video.snippet.resourceId.videoId}" style="background-image: url('#{video.snippet.thumbnails.standard.url}')" class="coverimage wrap-img")
+              div.mask
+                i.fa.fa-play            
+              strong #{video.snippet.title}          
+  div.where-are-we
+    div.wrapper.wrapper-10
+      div.center
+        h4 ¿Dónde estamos?
+      div.row-where.row-header
+        div.block.third
+          div.center
+            strong Hermosillo
+        div.block.third  
+          div.center
+            strong Mexico City
+        div.block.third  
+          div.center
+            strong Chihuahua
+      div.row-where
+        div.block.third
+          address Blvd. Antonio Quiroga 21 <br> Col. El Llano Hermosillo, Sonora, México 83210 <br> +52 (662) 216-7401
+        div.block.third.middle
+          address San Luis Potosí 196 int. 401 <br> Col. Roma Norte Del. Cuahutémoc Mexico, D.F. 06700 <br> +52 (55) 6388-6650
+        div.block.third  
+          address Calle 2da 2016 <br> Col. Centro Chihuahua, Chihuahua, México 31000 <br> +52 (614) 259-3974
+      
+          
+                  
+    
+              

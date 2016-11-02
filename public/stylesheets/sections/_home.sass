@@ -1,0 +1,200 @@
+$height-header : 750px
+$height-square : 140px
+.home-header
+  height: $height-header
+  overflow: hidden
+  position: relative
+  .squares
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 11
+    width: 40%
+    font-size: 0
+    .row-square
+      .half
+        font-size: 16px
+        width: 50%
+        display: inline-block
+        vertical-align: middle
+        &.vt
+          vertical-align: top
+        .pull-center
+          display: flex
+          align-items: center
+        .pull-down
+          display: flex
+          align-items: flex-end
+        .square-type-1
+          background-color: $orange-color
+        .square-type-2
+          background-color: $purpure-color
+          .in-text
+            color: #eedae4
+        .square-type-3
+          background-color: $aqua-color
+          width: 100%
+        .square-type-4
+          background-color: $strong-yellow-color
+          .in-text
+            color: $light-yellow-color
+        .square-type-5
+          background-color: $strong-purpure-color
+          width: 90%
+        .square-type-6
+          background-color: $dark-blue-color
+        &:first-child
+          .square
+            margin-left: auto
+      .square
+        height: $height-square
+        width: $height-square
+        padding: 10px
+        &.rect
+          height: 100px
+          vertical-align: top
+        .in-text
+          color: white
+          font-size: 30px
+          font-weight: bold
+          line-height: 35px
+  .mask
+    background: url('http://bigdropinc.com/wp-content/themes/bd/images/home/mask.png') repeat
+    z-index: 10
+    height: $height-header
+  .video
+    overflow: hidden
+    video
+      width: 100%
+      height: $height-header
+      transform: scale(1.5)
+.home-bottom
+  .right-type
+    position: relative
+    .title-inside
+      position: absolute
+      bottom: 50px
+      right: 0px
+      width: 90%
+      text-align: right
+      span
+        padding-right: 20px
+  .left-type
+    position: relative
+    .title-inside
+      position: absolute
+      bottom: 50px
+      left: 0px
+      width: 90%
+      span
+        padding-left: 20px
+  .wrapper-12
+    border-left: 1px solid $gray-black
+    border-right: 1px solid $gray-black
+    padding: 50px
+  .welcome
+    color: $orange-color
+    text-align: center
+    display: inline-block
+    font-size: 60px
+    font-weight: bold
+    &:after
+      content: ""
+      width: 50%
+      margin: 20px auto 50px auto
+      border-bottom: 1px solid $orange-color-2
+      display: block
+  .ns-places
+    background-color: $melon-color
+    height: 400px
+    position: relative
+    padding: 10px
+    .map
+      background-image: url("/images/map.png")
+      position: relative
+      z-index: 3
+      background-size: $height-header
+      background-repeat: no-repeat
+      background-position: 400px 0px
+      width: 100%
+      height: 100%
+    .title-places
+      font-size: 80px
+      line-height: 70px
+      font-weight: bold
+      color: rgba(0,0,0,0.6)
+      position: absolute
+      bottom: 20px
+      left: 20px
+      span
+        display: block
+  .labs
+    .photo-small
+      background-color: $gray-black
+  .cuu
+    .photo-small
+      background-color: $dark-blue-color
+  .news
+    margin-bottom: 5px
+    .photo-small
+      background-color: $aqua-color
+  .hmo
+    .photo-small
+      background-color: $yellow-color
+  .block
+    vertical-align: middle
+  .block-type-1
+    border-left: 5px solid white
+  .block-type-2
+    border-right: 5px solid white
+  .photo-large
+    height: 400px
+  .photo-small
+    height: 400px
+    .title-inside
+      padding: 0
+      font-size: 75px
+      line-height: 65px
+      border-bottom: 10px solid white
+      padding-bottom: 30px
+      span
+        display: block
+  .wrap-stripe
+    border-right: 1px solid $gray-black
+    border-left: 1px solid $gray-black
+    height: 100%
+  .wrap-blocks
+    border-right: 1px solid $gray-black
+    padding: 0 50px
+
+@media screen and (max-width: $break-medium)
+  .home-bottom
+    .wrapper-12
+      padding: 10px
+    .welcome
+      font-size: 35px
+      margin-top: 20px
+    .photo-small
+      width: 100%
+      border-right: 0
+      border-left: 0px
+    .photo-large
+      width: 100%
+      border-left: 0px
+  .home-header
+    .squares
+      width: 100%
+      position: relative
+      margin-top: 140px
+      .row-square
+        .square
+          width: 100%
+          height: 120px
+          justify-content: center
+          text-align: center
+          align-items: center
+          &.rect
+            width: 100%
+            height: 120px
+        .half
+          width: 100%

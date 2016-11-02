@@ -1,4 +1,89 @@
 extends ../layout
 
 block content
-  h1 NEARSOFT LABS  
+  div.labs-header
+    div.coverimage.wrapper-12(style='background-image: url("images/intern_1.jpg");')
+      div.small-9.small-centered
+        div.text-wrapper.small-12.medium-6
+          h1.top-title What is
+          img(src="images/logo-labs-orange.png" alt="Nearsoft labs")
+          p Desde que entras a Nearsoft, está ahí escrito en la pared: queremos convertirnos en una de las empresas más innovadoras de México
+
+  div.stripe-labs.small-5.small-centered
+
+  div.code.wrapper-12
+    div.small-9.small-centered
+      div.section-title
+        h2 CODE
+      div.code-container
+        div.code-content.small-9.small-centered
+          p
+            | NearsoftLabs nsLabs = NearsoftLabs</br></br>
+            | &emsp;&emsp;&emsp;&emsp;.description("Para lograr esto, sabemos que tenemos que ser capaces de identificar problemas, encontrar las oportunidades que se presentan y construir soluciones para hacer de la innovación, una parte muy importante de Nearsoft y que se grabe en nuestro ADN.</br></br>
+            | Nearsoft Labs es el equipo que ayuda al resto del team a convertir esas oportunidades identificadas por la comunidad, en producos y servicios para la industria del software.")</br></br>
+            | &emsp;&emsp;&emsp;&emsp;.latitude(-34.397)</br>
+            | &emsp;&emsp;&emsp;&emsp;.longitude(150.644)</br>
+            | &emsp;&emsp;&emsp;&emsp;.zoom( 8 )</br>
+            | &emsp;&emsp;&emsp;&emsp;.buildAwesomeness();</br>
+
+        div.scroll
+          img.scroll-icon(src="images/scroll.png" alt="scroll icon")
+
+  div.gallery
+    div.small-12.medium-10.small-centered
+      div.gallery-container
+        div(class="photo photo-small")
+          div(class="fill-photo coverimage" style="background-image: url('images/photo_3.png')")
+        div(class="photo photo-large")
+          div(class="fill-photo coverimage" style="background-image: url('images/photo_4.png')")
+
+  div.news.wrapper-12
+    div.small-9.small-centered
+      div.news-top.small-12
+        div.section-title.small-12.medium-6
+          h2 NEWS
+        div.news-search.small-12.medium-6
+          div.news-input-wrapper.small-11
+            input(type="text", placeholder="search")
+          div.news-icon-wrapper.small-1
+            img.search-icon(src="images/search.png" alt="search icon")
+
+      div.news-content.wrapper-12
+        div.content-top.small-12
+          div.circle-container
+            div.circle
+            div.circle
+            div.circle
+        div.content-middle.small-12
+          div.content-wrapper.small-10.small-centered
+            div.content-title
+              h2 Atlassian<span class="news-title-highlight" style="font-size: 80px">&#43;</span>Nearsoft
+            div.content-text
+              p Además de ser una buena oportunidad para desarrollar add-ons, el haber participado en dos Connect Weeks nos ha permitido estar en contacto con el equipo de Atlassian. Esto a su vez nos ha brindado varias oportunidades interesantes al equipo de Labs y también a Nearsoft.
+            div.content-title
+              h2 Workshop <span class="news-title-highlight">(HMO)</span> - From Idea to MVP
+            div.content-text
+              p El próximo taller, From Idea to MVP impartido en Hermosillo, tratará de cómo describir a fondo una idea usando el Product Canvas, para poder así definir un MVP para validar la propuesta de valor con usuarios potenciales antes de empezar a desarrollar.
+          div.scroll
+            img.scroll-icon(src="images/scroll.png" alt="scroll icon")
+  div.stripe-labs.small-10.small-centered
+  div.products.wraper-12
+    div.small-9.small-centered
+      div.title.products-title.small-5
+        h3 Products
+      div.lists.products-lists
+        div.products-list.small-12.medium-6
+          ul.products-items
+            li.product-item
+              a(href="http://planningwith.cards/") Planning with cards
+            li.product-item
+              a(href="http://www.nuuk.me/") Nuuk
+            li.product-item
+              a(href="#") RideAsOne
+        div.products-list.small-12.medium-6
+          ul.products-items
+            li.product-item
+              a(href="#") ApiToCode
+            li.product-item
+              a(href="#") Ikigai
+            li.product-item And more to come...

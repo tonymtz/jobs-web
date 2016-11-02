@@ -1,0 +1,182 @@
+
+
+.labs-header
+  color: $dark-blue-color
+  background-color: $gray-color
+  margin-top: -120px
+  margin-bottom: 60px
+
+  img
+    margin-left: -20px
+    margin-top: -25px
+
+  h1
+    font-size: 100px
+    margin-bottom: 0px
+  p
+    font-size: 20px
+
+  .text-wrapper
+    padding-top: 300px
+    padding-bottom: 20px
+
+  .title
+    color: $orange-color
+    margin-top: -20px
+
+.section-title
+  h2
+    color: $orange-color
+
+.news
+  margin-bottom: 60px
+.news-top
+  div
+    display: inline-flex
+  .news-search
+    display: none
+    input
+      width: 98%
+      float: right
+      background-color: $gray-color
+      border: none
+
+    ::-webkit-input-placeholder
+      color: $dark-blue-color
+    .news-icon-wrapper
+      .search-icon
+        position: relative
+        max-height: 50px
+        max-width: 50px
+
+.news-content
+
+  .content-top
+    border: 5px solid $dark-blue-color
+    border-radius: 10px 10px 0 0
+    padding: 10px 0px 5px 10px
+
+    .circle-container
+      display: inline
+      .circle
+        display: inline-block
+        margin: 5px
+        border-radius: 50%
+        height: 14px
+        width: 14px
+        background-color: $orange-color
+
+  .content-middle
+    border: 5px solid $dark-blue-color
+    border-top: none
+    padding-bottom: 30px
+
+  .content-wrapper
+    font-size: 20px
+    padding-top: 30px
+    text-align: justify
+
+  .content-title
+    color: $dark-blue-color
+
+  .news-title-highlight
+    color: $orange-color
+
+  .content-text
+    margin-bottom: 60px
+
+
+.scroll
+  position: relative
+  float: right
+  right: 20px
+  bottom: 60px
+  img
+    max-height: 40px
+
+.stripe-labs
+  border: 3.25px solid $white-gray-color
+
+.products
+  margin-top: 40px
+  margin-bottom: 180px
+
+.products-title
+  border: 5px solid $dark-blue-color
+  border-bottom: none
+
+  h3
+    margin: auto auto -5px 10px
+    color: $dark-blue-color
+
+.products-lists
+  .medium-6
+    @media screen and (min-width: 40em)
+      width: 49.7%
+      margin-right: 2px
+
+.products-list
+  padding-top: 12px
+  display: inline-block
+  border: 5px solid $dark-blue-color
+  background-color: $dark-blue-color
+
+.products-items
+  list-style-type: none
+  font-size: 20px
+  font-weight: bold
+  color: white
+
+  li
+    margin-left: 40px
+  li:before
+    color: $orange-color
+    content: '\2014'
+    position: absolute
+    margin-left: -20px
+
+  a
+    color: white
+    font-weight: bold
+
+  a:hover
+    text-decoration: underline
+    color: $orange-color
+
+
+.code
+  margin-top: 10px
+  margin-bottom: 60px
+  .code-container
+    background-color: $white-gray-color
+
+  .code-content
+    font-family: monospace
+    font-size: 16px
+    padding: 50px 0 50px 0
+    color: $orange-color
+
+.gallery
+  margin-bottom: 60px
+
+  .gallery-container
+    display: inline
+    margin: 80px 0 80px 0
+    height: 320px
+    .photo
+      display: inline-block
+    .photo-large
+      width: 65%
+    .photo-small
+      width: 33%
+      margin-right: 10px
+    .fill-photo
+      height: 320px
+
+    //handling small screen
+    @media(max-width: 500px)
+      .photo-small
+        margin-right: 0
+        width: 35%
+      .fill-photo
+        height: 150px

@@ -1,30 +1,26 @@
 # Nearsoft Jobs
 
-This is the official website of NS Jobs.
+> This is the official website of Nearsoft Jobs
 
-## Setup environment
+## Setup
 
 * Clone the repository
+* Install Node.js (e.g. using [`nodenv`](https://github.com/nodenv/nodenv))
+* Install dependencies:
 
-* Once you clone it, run the next commands:
+```bash
+npm install          # install npm dependencies
+npm install -g bower # install bower globally
+bower install        # install bower dependencies
+```
 
-  `npm install`
+* Build the app: `npm run build`
+* Run the app: `npm start`
 
-  `bower install`
-  
-* Also, you have to install the grunt command line interface
-  `npm install -g grunt-cli`
+### Notes
 
-* You need to have ruby installed 
-  verify it with `ruby --version` 
+To start the app: `npm start`
 
-* And you need to install the Saas gem  
-  `gem install sass`
+To build the app: `npm run build`
 
-
-## grunt
-Use grunt for building the project
-
-* `grunt watch`, it will look for any changes in the code and rebuild it for you.
-
-* `grunt build` for building the project manually
+To watch for changes: `npm run watch`
