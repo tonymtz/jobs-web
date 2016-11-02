@@ -3,7 +3,7 @@ extends ../layout
 block content
   header.position-header
     div.wrapper
-      h1(class="position-title" style="background-image: url('images/open-positions.png')")
+      h1.position-title
         span.show-for-sr OPEN POSITIONS
         span.show-for-sr We want you
 
@@ -19,7 +19,7 @@ block content
           span OP Profiles &
           span.bold Requirements
       div.requirements-section.github
-        a(class="github-link" style="background-image: url('images/github.png')")
+        a.github-link
           div.github-container
             span Consulta nuestras 
             span vacantes en
@@ -30,18 +30,42 @@ block content
         span.sub Our hiring
         span Process
 
-      div(class="our-hiring-process-icons" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-1" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-2" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-3" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-4" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-5" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-6" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-7" style="background-image: url('images/icons.png')")
-        div(class="our-hiring-process-icons-item our-hiring-process-icons-item-8" style="background-image: url('images/icons.png')")
+      div.our-hiring-process-icons
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-1
+          p.our-hiring-process-icons-item-description Manda tu CV a Jobs@nearsoft.com
+
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-2
+          p.our-hiring-process-icons-item-description Espera a que te contactemos
+
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-3
+          p.our-hiring-process-icons-item-description Test de lógica de programación en linea
+
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-4
+          p.our-hiring-process-icons-item-description Entrevista en inglés
+
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-5
+          p.our-hiring-process-icons-item-description Tech Screen: Experiencia y background técnico
+
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-6
+          p.our-hiring-process-icons-item-description Profile Interview Entrevista técnica a profundidad
+
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-7
+          p.our-hiring-process-icons-item-description Task interview Pair programming, Ejercicios de código
+          
+        div.our-hiring-process-icons-item
+          div.our-hiring-process-icons-item-8
+          p.our-hiring-process-icons-item-description Thumbs meeting Review de tu proceso y decisión final
 
   section.our-recruiting-team
     div.wrapper.wrapper-10
       h2 Our recruiting team
 
-      div(class="our-recruiting-team-img" style="background-image: url('images/recruiters.png')")
+      div.our-recruiting-team-img
+        img(src="images/recruiters.png")

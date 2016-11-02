@@ -8,6 +8,7 @@
     height: 460px
     background-position: center
     background-repeat: no-repeat
+    background-image: url('../images/open-positions.png')
 
 
 .we-want-you
@@ -58,6 +59,7 @@
       height: 194px
       background-repeat: no-repeat
       background-position: 377px 7px
+      background-image: url('../images/github.png')
       color: #fff
 
     &-container
@@ -70,30 +72,6 @@
 
     span
       display: block
-
-@media screen and (max-width: 986px)
-.requirements
-  height: auto
-
-  &-section
-    width: 100%
-
-    .profiles
-      &-container
-        float: none
-
-    .github
-      background-color: #bdbdbd
-
-      &-link
-        background-position: right !important
-
-      &-container
-        text-align: right
-        padding-right: 192px
-        padding-left: 0
-
-
 
 .our-hiring-process
   padding-top: 90px
@@ -119,70 +97,83 @@
       letter-spacing: -2px
 
   &-icons
-    background-size: 100%
-    background-repeat: no-repeat
+    background-image: none !important
+    text-align: center
+    height: auto
     width: 100%
     max-width: 1075px
-    height: 630px
 
     &-item
-      display: none
+      display: inline-block
+      vertical-align: top
+      width: 235px
+      height: 315px
+      margin: 0px 10px
 
-@media screen and (max-width: $break-medium)
-  .our-hiring-process
-    &-icons
-      background-image: none !important
-      text-align: center
-      height: auto
+      & > div
+        width: 100%;
+        height: 214px;
+        background-repeat: no-repeat
+        background-image: url('../images/icons.png')
 
-      &-item
-        display: inline-block
-        width: 235px
-        height: 315px
-        margin: 0px 15px
+      &-description
+        color: #bdbdbd
+        font-size: 18px
+        font-weight: 700
+        line-height: 1.3
+        text-align:center
 
-        &-1
-          background-position: -32px 0px
-          background-repeat: no-repeat
+      &-1
+        background-position: -32px 0px
 
-        &-2
-          background-position: -250px 0px
-          background-repeat: no-repeat
+      &-2
+        background-position: -250px 0px
 
-        &-3
-          background-position: -502px 0px
-          background-repeat: no-repeat
+      &-3
+        background-position: -502px 0px
 
-        &-4
-          background-position: -765px 0px
-          background-repeat: no-repeat
+      &-4
+        background-position: -765px 0px
 
-        &-5
-          background-position: -57px -285px
-          background-repeat: no-repeat
+      &-5
+        background-position: -57px -274px
 
-        &-6
-          background-position: -316px -285px
-          background-repeat: no-repeat
+      &-6
+        background-position: -316px -274px
 
-        &-7
-          background-position: -574px -285px
-          background-repeat: no-repeat
+      &-7
+        background-position: -574px -274px
 
-        &-8
-          background-position: -795px -285px
-          background-repeat: no-repeat
+      &-8
+        background-position: -795px -274px
 
 .our-recruiting-team
   padding-top: 2px
-
-  &-img 
-    height: 807px
-    background-size: 100%
-    background-repeat: no-repeat
   
   h2
     color: #f19e81
     text-align: center
     font-size: 53px
     letter-spacing: 1px
+
+@media screen and (max-width: 986px)
+  .requirements
+    height: auto
+
+    &-section
+      width: 100%
+
+      .profiles
+        &-container
+          float: none
+
+      .github
+        background-color: #bdbdbd
+
+        &-link
+          background-position: right !important
+
+        &-container
+          text-align: right
+          padding-right: 192px
+          padding-left: 0
