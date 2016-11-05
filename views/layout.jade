@@ -2,13 +2,14 @@ doctype html
 html
   head
     title= title
-    meta(name="viewport" content="width=device-width, initial-scale=1")    
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel='stylesheet', href='/vendor/foundation-sites/dist/foundation.css')
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.css')
     link(rel='stylesheet', href='/dist/styles.css')
   body
     include ./partials/_menu.jade
     block content
-    include ./partials/_footer.jade  
+    include ./partials/_footer.jade
     script(src='/vendor/jquery/dist/jquery.js')
+    script(src='/vendor/foundation-sites/dist/foundation.min.js')
     script(src='/dist/built.js')

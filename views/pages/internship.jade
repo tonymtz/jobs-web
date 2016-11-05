@@ -1,0 +1,163 @@
+extends ../layout
+
+block content
+	//vars
+	- var images_url = "/images/internship/"
+	//page
+	div.small-10.small-centered
+		header.row.internship-header
+			div.small-7.columns
+				h1.shadow-text
+					p INTERN- <br>SHIP
+				h1.clear-text
+					p What is <br> NS Academy?
+			div.logo-container.small-5.columns.small-centered
+				img(src=images_url + "academy.png" alt="nearsoft academy logo")
+		div.row.introduction
+			div.small-12.colums
+				p.text-body Este programa surgió de la idea de apoyar al talento joven a adquirir buenas prácticas y experiencia para mejorar su currículum, y a la vez prepararse para entrevistas con clientes con necesidades de alta calidad en software.
+
+		div.goals-container.row
+			div.goals
+				div.goals-description.small-12.large-4.gray-background
+					h1.subtitle Goals
+					p.text-body En Nearsoft Academy no sólo se enseñan cuestiones técnicas, sino también sobre cómo manejar currículums, entrevistas, aportaciones a proyectos open source, prototipos, documentación, etc.
+				div.goals-image.small-12.large-8
+					img(src=images_url + "intern_2.jpg" alt="nearsoft academy group")
+		div.how-to-apply.row.center
+			div.small-11.small-centered.colums
+				h1.subtitle How to apply?
+				p.text-body.text-body La duración está pensada en 6 meses, durante los cuales estarías trabajando bajo la supervisión de un mentor en algún objetivo personal: sea especializarte en alguna tecnología en específico o aplicar para una de nuestras vacantes.
+		div.how-to-apply.requisitos.row
+			div.small-10.medium-9.small-centered.colums
+				h2.subtitle Requisitos
+				ul.text-body
+					li
+						span Estar en el último semestre (o equivalente) de tu carrera de sistemas computacionales (o afín) o ser recién egresado.
+					li
+						span Tener un inglés avanzado.
+					li
+						span Presentar y aprobar el logic test (indispensable aprobar para cualquier developer o intern que ingrese a Nearsoft).
+					li
+						span Tomar y aprobar entrevista en inglés.
+					li
+						span Tener una entrevista con los coordinadores del proyecto y con posibles mentores.
+
+		div.programas-container.row
+			div.gray-background.separator
+			div.convocatoria.gray-background
+				div.small-12.large-6.columns.right
+					img(src=images_url + "calendario.png" alt="next event day calendar")
+				div.small-12.small-centered.large-6.columns
+					div
+						p
+							| PRÓXIMA</br>
+							| CONVOCATORIA</br>
+							| Febrero 2017
+						<span class=button><a href="mailto:community@nearsoft.com?Subject=Internship">Contact us</a></span>
+			div.gray-background.separator
+		
+		div.row
+			div.programas-title.small-12.colums
+				h1.subtitle Otros programas
+
+		div.programas-container.row
+			div.gray-background.separator
+			div.programas
+				img(src=images_url + "ASNlogo.png" data-open="modal1" alt="nearsoft android school").small-12.large-4.colums
+				img(src=images_url + "Apprentice.png" data-open="modal2" alt="nearsoft apprentice").small-12.large-4.colums
+				img(src=images_url + "SOFE.png" data-open="modal3" alt="nearsoft student of excellence").small-12.large-4.colums
+
+			div.gray-background.separator
+
+		div#modal1.reveal.large.pop-up(data-reveal)
+			div.frame
+				div.circles.small-12
+					div.circle.circle-red
+					div.circle.circle-yellow
+					div.circle.circle-green
+				img(src=images_url + "ASNlogo.png" alt="nearsoft android school").small-12
+				div.orange-separator.small-11.small-centered
+				h3.subtitle HMO
+				div.info.small-10.small-centered
+					p
+						| Es un curso para estudiantes de universidad con 6 clases al semestre
+						| donde aprenderán lo necesario para hacer una aplicación de Android
+						| funcional, siguiendo buenos estándares de codificación y arquitectura.
+				button.close-button(data-close aria-label="Close modal" type="button")
+					span(aria-hidden="true")&times;
+
+		div#modal2.reveal.large.pop-up(data-reveal)
+			div.frame
+				div.circles.small-12
+					div.circle.circle-red
+					div.circle.circle-yellow
+					div.circle.circle-green
+				img(src=images_url + "Apprentice.png" alt="nearsoft apprentice").small-12
+				div.orange-separator.small-11.small-centered
+				h3.subtitle CDMX - HMO
+				div.info.small-10.small-centered
+					p
+						| El Apprentice es un proyecto dirigido a todo aquel que quiera aprender;
+						| desde estudiantes de secundaria hasta personas que ya están trabajando en
+						| algo relacionado con la ingeniería de software. Este programa está destinado
+						| a proporcionar un fuerte fundamento en diversos temas que abarcan desde los
+						| fundamentos de informática hasta frameworks y diferentes tecnologías.
+				button.close-button(data-close aria-label="Close modal" type="button")
+					span(aria-hidden="true")&times;
+
+		div#modal3.reveal.large.pop-up(data-reveal)
+			div.frame
+				div.circles.small-12
+					div.circle.circle-red
+					div.circle.circle-yellow
+					div.circle.circle-green
+				img(src=images_url + "SOFE.png" alt="nearsoft student of excellence").small-12
+				div.orange-separator.small-11.small-centered
+				h3.subtitle CUU - HMO
+				div.info.small-10.small-centered
+					p
+						| La iniciativa "Student of Excellence" se ha creado para impactar las
+						| carreras de los estudiantes que son apasionados de desarrollo de software
+						|	y recompensar el rendimiento académico, a través de un concurso de
+						|	programación en el cual reconozcamos a aquellos alumnos sobresalientes con
+						|	premios y reconocimiento de Nearsoft y los otros participantes.
+					p.subtitle.left ¿Quién es candidato para aplicar? Si eres...
+					div.requisitos-sofe
+						div.requisito-sofe
+							div
+								div.rounded-square
+							p Estudiante de carrera de Sistemas o afín, en cualquier</br> universidad de Chihuahua o HMO.
+						div.requisito-sofe
+							div
+								div.rounded-square
+							p Tienes al menos la mitad de los créditos de su carrera (5to semestre).
+						div.requisito-sofe
+							div
+								div.rounded-square
+							p Logrando un promedio mínimo de 80.
+						div.requisito-sofe
+							div
+								div.rounded-square
+							p Tienes habilidades para la ingeniería de software.
+						div.requisito-sofe
+							div
+								div.rounded-square
+							p Estás inscrito en el presente semestre con un estatus regular.
+						div.requisito-sofe
+							div
+								div.rounded-square
+							div
+								p Y sientes pasión por el desarrollo de software…
+						div
+							p.subtitle.left How to apply?
+							p.sofe-apply-info
+								| Para registrarse sólo hay que llenar este formulario, proporcionando tus datos
+								| de contacto como Estudiante de Excelencia. Es importante que incluyas correctamente
+								| tu escuela, correo y número de teléfono para facilitar el contacto para cada fase.
+						div.contacto.center
+							p.subtitle ¡Contáctanos para mayor información!
+							a.subtitle(href="mailto:community@nearsoft.com?Subject=SOFE") community@nearsoft.com
+
+				button.close-button(data-close aria-label="Close modal" type="button")
+					span(aria-hidden="true")&times;

@@ -12,8 +12,8 @@ router.get('/contact', function(req, res, next) {
   res.render('pages/contact', { title: 'Nearsoft Contact' });
 });
 
-router.get('/intership', function(req, res, next) {
-  res.render('pages/intership', { title: 'Nearsoft Intership' });
+router.get('/internship', function(req, res, next) {
+  res.render('pages/internship', { title: 'Nearsoft Internship' });
 });
 
 router.get('/labs', function(req, res, next) {
