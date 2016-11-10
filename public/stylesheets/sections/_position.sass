@@ -25,21 +25,23 @@
 
 .requirements
   color: white
-  height: 195px
+  display: flex
 
   &-section
     display: inline-block
     width: 50%
-    height: 194px
     vertical-align: top
+    padding: 20px
 
   .profiles
     background-color: #e36260
-    padding-top: 31px
+    padding: 30px
+    display: flex
+    align-items: center
 
     &-container
-      float: right
-      margin-right: 32px
+      width: 80%
+      margin-left: auto
 
     span
       display: block
@@ -54,29 +56,28 @@
   .github
     background-color: #bdbdbd
 
-    &-link
-      display: block
-      height: 194px
-      background-repeat: no-repeat
-      background-position: 377px 7px
-      background-image: url('../images/github.png')
-      color: #fff
-
     &-container
-      padding: 52px 25px
-      font-family: $font-bebas
       font-size: 39px
       line-height: 1.2
       text-transform: uppercase
-      letter-spacing: -1px
-
-    span
-      display: block
+      width: 80%
+      .block
+        display: inline-block
+        vertical-align: middle
+      .left-side-strip
+        width: 60%
+        font-weight: bold
+        a
+          color: white
+          &:hover
+            color: $gray-dark-color
+      .right-side-strip
+        width: 40%
 
 .our-hiring-process
   padding-top: 90px
 
-  h2 
+  h2
     font-size: 72px
     padding-left: 35px
     line-height: 1
@@ -148,32 +149,32 @@
         background-position: -795px -274px
 
 .our-recruiting-team
-  padding-top: 2px
-  
+  padding: 30px 0 50px 0px
+
   h2
-    color: #f19e81
+    color: $melon-color
     text-align: center
     font-size: 53px
     letter-spacing: 1px
 
-@media screen and (max-width: 986px)
+@media screen and (max-width: $break-large)
   .requirements
-    height: auto
-
     &-section
-      width: 100%
-
-      .profiles
-        &-container
-          float: none
-
+      display: inline-block
+      &.profiles
+        display: inline-block
+      .profiles-container
+        margin: auto
+        width: 100%
+        span
+          font-size: 35px
+        .bold
+          font-size: 40px
       .github
         background-color: #bdbdbd
-
-        &-link
-          background-position: right !important
-
         &-container
-          text-align: right
-          padding-right: 192px
-          padding-left: 0
+          width: 100%
+          .left-side-strip
+            width: 80%
+          .right-side-strip
+            width: 20%

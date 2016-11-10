@@ -35,7 +35,6 @@ router.get('/open-position', function(req, res, next) {
 router.get('/who-we-are', function(req, res, next) {
 
   var youTube = new YouTube();
-  console.log(env.YOUTUBE_API_KEY);
   youTube.setKey(env.YOUTUBE_API_KEY);
   youTube.getPlayListsItemsById(env.YOUTUBE_LIST_ID, function(err, response) {
     console.log(err);
