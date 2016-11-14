@@ -25,7 +25,7 @@ router.get('/life', function(req, res, next) {
 });
 
 router.get('/community', function(req, res, next) {
-  res.render('pages/comunity', { title: 'Nearsoft Comunity' });
+  res.render('pages/comunity', { title: 'Nearsoft Community' });
 });
 
 router.get('/open-position', function(req, res, next) {

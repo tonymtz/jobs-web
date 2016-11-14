@@ -103,6 +103,66 @@ ul
   &.wrapper-6
     width: 45%
 
+body
+  .wrap-content
+    transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1)
+  &.active-menu
+    .wrap-content
+      transform: translateX(-20px)
+    .top-menu
+      .right-top-menu
+        #menu-button
+          .wrap-lines
+            .line
+              background-color: white
+    .side-menu
+      transform: translateX(0%)
+  .side-menu
+    position: fixed
+    right: 0
+    top: 0px
+    height: 100%
+    z-index: 1003
+    width: 20%
+    background-color: white
+    padding: 20px
+    transform: translateX(100%)
+    transition: all 0.2s cubic-bezier(0.7, 0, 0.3, 1)
+    border-left: 2px solid $light-orange-color
+    box-shadow: -2px -2px 3px rgba(0,0,0,0.1)
+    .tr
+      text-align: right
+      position: absolute
+      right: 10px
+      top: 10px
+      z-index: 3
+      a
+        font-size: 40px
+        line-height: 40px
+        margin: 0
+        color: $dark-blue-color
+    .menu-item
+      color: white
+      font-size: 20px
+      margin: 15px 0px
+      display: block
+      position: relative
+      z-index: 2
+      color: $dark-blue-color
+      transition: all 0.4s ease
+      left: 0
+      width: 100%
+      &:after
+        content: ""
+        border-bottom: 2px solid $orange-color
+        display: block
+        width: 20px
+        margin: 5px 0px
+        transition: all 0.2s cubic-bezier(0.7, 0, 0.3, 1)
+      &:hover
+        &:after
+          width: 100%
+
 .top-menu
   background-color: rgba(255,255,255,0.9)
   padding: 20px 0px
@@ -111,12 +171,16 @@ ul
   top: 0
   left: 0
   width: 100%
+  transition: all 0.4s ease
   .wrapper
     display: flex
     flex-direction: row
     justify-content: center
   .right-top-menu
     align-self: center
+    #menu-button
+      position: relative
+      z-index: 1001
     img
       height: 40px
       &:hover
@@ -162,8 +226,18 @@ ul
 
   .left-top-menu
     margin-right: auto
-    img
-      width: 200px
+    a
+      &:hover
+        .logo-star
+          transform: rotate(45deg)
+    .logo-star
+      width: 25px
+      transition: all 0.3s ease
+      position: relative
+      top: -10px
+      margin-right: 10px
+    .logo-text
+      width: 160px
 
 .wrap-stripe
   width: 15%
@@ -208,6 +282,10 @@ ul
         padding: 15px 0px
         position: relative
         font-size: 15px
+        a
+          font-size: 20px
+          padding: 5px 0px
+          transition: all 0.3s ease
         .container
           vertical-align: bottom
         .table
@@ -260,6 +338,9 @@ ul
 
 
 @media screen and (max-width: $break-medium)
+  body
+    .side-menu
+      width: 50%
   .wrapper
     &.wrapper-12,
       width: 95%
@@ -292,3 +373,8 @@ ul
         .block
           &.third
             width: 100%
+
+@media (max-width: $break-small)
+  body
+    .side-menu
+      width: 100%

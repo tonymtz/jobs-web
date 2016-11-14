@@ -145,3 +145,79 @@
       width: 50%
     &.wrap-text
       padding-left: 40px
+
+@media (max-width: $break-medium)
+  .where-are-we
+    margin-bottom: 50px
+    .row-header
+      display: none
+    .row-where
+      .block
+        &:nth-child(1)
+          &:before
+            content: "Hermosillo"
+            display: block
+            color: $orange-color-2
+        &:nth-child(2)
+          &:before
+            content: "Mexico City"
+            display: block
+            color: $orange-color-2
+        &:nth-child(3)
+          &:before
+            content: "Chihuahua"
+            display: block
+            color: $orange-color-2
+        &.third
+          width: 100%
+  .meet-us
+    .list-videos
+      li
+        display: block
+        width: 100%
+        .wrap-img
+          height: 270px
+          strong
+            position: absolute
+            top: 5px
+            left: 5px
+            background-color: white
+            padding: 4px
+  .core-values
+    .item
+      .block
+        margin: 10px 0px
+      .wrap-img
+        display: block
+        text-align: center
+        width: 100%
+        margin: 0
+      .wrap-text
+        width: 100%
+        span
+          font-size: 30px
+          display: block
+          text-align: center
+      h4
+        line-height: 50px
+        font-size: 45px
+        text-align: center
+    .block
+      &.half
+        width: 100%
+  .who-section
+    margin: 30px 0px
+    .wrapper-10
+      width: 100%
+      padding: 0 10px
+    .block
+      &.wrap-text
+        padding: 0
+      &.half
+        width: 100%
+  #who-header
+    .block
+      width: 100%
+    .nice-title-who
+      font-size: 35px
+      text-align: center
