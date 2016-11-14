@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   div.community
-    header.community-header
+    header.community-header.nice-scroll-img.coverimage.stretch-height
       h1 
         span What is 
         span NS Community?
@@ -18,30 +18,50 @@ block content
         h2 
           span Create & 
           span Support
-
+      div.bb
       div.community-create-support-description
         div.wrapper.wrapper-12
-          div.sofe
-          div.docker
-          div.django-girls
-          div.soon
+          div.row-blocks
+            div(class="block scroll-paralax" data-vel="-0.02")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/sofe.png")
+              div.title-create.in-block
+                span SOFE
+            div(class="block scroll-paralax" data-vel="0.09")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/sofe.png")
+              div.title-create.in-block
+                span SOFE   
+                
+          div.row-blocks
+            div(class="block scroll-paralax" data-vel="-0.01")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/sofe.png")
+              div.title-create.in-block
+                span SOFE
+            div(class="block scroll-paralax" data-vel="0.15")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/sofe.png")
+              div.title-create.in-block
+                span SOFE   
 
     section.community-upcoming-events
-      div.community-upcoming-events-title
-        div.community-upcoming-events-title-wrapper
-          span Upcomin events
-          span Calendar
-
-      div.community-upcoming-events-date
-        div.community-upcoming-events-date-calendar
-          div.community-upcoming-events-date-calendar-wrapper
-            span julio
+      div.block.half.left-side
+        span.upcoming.square-text UPCOMING EVENTS
+        div
+          a(href="#" class="square-text down-text") CALENDAR
+      div.block.half.right-side
+        div.calendar
+          div.month.square-text
+            span JULIO
+          div.day.square-text
             span 23
-
-        div.community-upcoming-events-date-description
-          div.community-upcoming-events-date-description-wrapper
-            span Jav
-            span Talks
+        div.event-text
+          span JAVA TALKS
 
     section.community-sponsorship
       div.wrapper.wrapper-11
@@ -55,5 +75,3 @@ block content
 
             p.mail 
               a community@nearsoft.com
-
-

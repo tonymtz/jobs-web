@@ -3,8 +3,10 @@
 .labs-header
   color: $dark-blue-color
   background-color: $gray-color
-  margin-top: -120px
   margin-bottom: 60px
+  .wrapper
+    position: relative
+    height: 100%
 
   img
     margin-left: -20px
@@ -17,8 +19,9 @@
     font-size: 20px
 
   .text-wrapper
-    padding-top: 300px
-    padding-bottom: 20px
+    position: absolute
+    bottom: 60px
+    left: 0
 
   .title
     color: $orange-color
@@ -101,13 +104,19 @@
   margin-top: 40px
   margin-bottom: 180px
 
-.products-title
-  border: 5px solid $dark-blue-color
-  border-bottom: none
-
-  h3
-    margin: auto auto -5px 10px
+  .products-title
+    padding: 10px
+    border: 7px solid $dark-blue-color
+    width: 30%
+    text-align: center
     color: $dark-blue-color
+    font-weight: bold
+    border-bottom: none
+    h3
+      font-size: 57px
+      line-height: 50px
+      font-weight: bold
+
 
 .products-lists
   .medium-6
@@ -116,9 +125,8 @@
       margin-right: 2px
 
 .products-list
-  padding-top: 12px
   display: inline-block
-  border: 5px solid $dark-blue-color
+  padding: 10px
   background-color: $dark-blue-color
 
 .products-items
@@ -126,23 +134,21 @@
   font-size: 20px
   font-weight: bold
   color: white
-
   li
-    margin-left: 40px
-  li:before
-    color: $orange-color
-    content: '\2014'
-    position: absolute
-    margin-left: -20px
-
-  a
-    color: white
-    font-weight: bold
-
-  a:hover
-    text-decoration: underline
-    color: $orange-color
-
+    padding: 10px 0px
+    padding-left: 20px
+    &:before
+      color: $orange-color
+      content: '\2014'
+      margin-right: 5px
+      display: inline-block
+    a
+      color: white
+      font-weight: bold
+      font-size: 22px
+      &:hover
+        text-decoration: underline
+        color: $orange-color
 
 .code
   margin-top: 10px
@@ -172,6 +178,9 @@
       margin-right: 10px
     .fill-photo
       height: 320px
+      &.inner-shadow
+        background-attachment: fixed
+        box-shadow: inset 2px 2px 32px rgba(0,0,0,0.3)
 
     //handling small screen
     @media(max-width: 500px)
@@ -180,3 +189,8 @@
         width: 35%
       .fill-photo
         height: 150px
+
+@media (max-width: $break-medium)
+  .products
+    .products-title
+      width: 100%

@@ -7,9 +7,11 @@ html
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.css')
     link(rel='stylesheet', href='/dist/styles.css')
   body
+    include ./partials/_side_menu.jade
     include ./partials/_menu.jade
-    block content
-    include ./partials/_footer.jade
+    div.wrap-content      
+      block content
+      include ./partials/_footer.jade
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/vendor/foundation-sites/dist/foundation.min.js')
     script(src='/dist/built.js')

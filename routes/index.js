@@ -25,7 +25,7 @@ router.get('/life', function(req, res, next) {
 });
 
 router.get('/community', function(req, res, next) {
-  res.render('pages/comunity', { title: 'Nearsoft Comunity' });
+  res.render('pages/comunity', { title: 'Nearsoft Community' });
 });
 
 router.get('/open-position', function(req, res, next) {
@@ -35,7 +35,6 @@ router.get('/open-position', function(req, res, next) {
 router.get('/who-we-are', function(req, res, next) {
 
   var youTube = new YouTube();
-  console.log(env.YOUTUBE_API_KEY);
   youTube.setKey(env.YOUTUBE_API_KEY);
   youTube.getPlayListsItemsById(env.YOUTUBE_LIST_ID, function(err, response) {
     console.log(err);
