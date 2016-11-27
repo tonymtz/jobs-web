@@ -6,8 +6,8 @@
   background-position-y: -100px
   height: 500px
   .wrap-box-title
-    border-bottom: 10px solid $orange-color
-    width: 30%
+    // border-bottom: 10px solid $orange-color
+    width: 40%
     margin-top: 50px
     position: relative
     padding-bottom: 20px
@@ -16,16 +16,17 @@
       span
         display: block
         &.big-text
-          font-size: 150px
+          font-size: 100px
           font-weight: bold
-          line-height: 120px
+          line-height: 100px
+          border-bottom: 10px solid $orange-color
+          display: inline-block
         &.small-text
           font-size: 30px
-
           text-align: center
           position: relative
-          top: 30px
-          left: 20px
+          top: 15px
+          display: inline-block
 
 .nice-paragraph
   font-size: 24px
@@ -123,6 +124,12 @@
   margin: 70px 0px
   margin-bottom: 150px
   display: flex
+  color: $orange-color
+  &:hover
+    color: $orange-color
+    .arrow-link
+      i
+        transform: translateX(10px)
   .img-medium
     width: 70%
     background-image: url('../images/photo_9.png')
@@ -154,6 +161,7 @@
       margin-top: 30px
       display: inline-block
     i
+      transition: all 0.4s ease
 
 
 @media screen and (max-width: $break-medium)

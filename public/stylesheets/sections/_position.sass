@@ -56,24 +56,31 @@
 
   .github
     background-color: #bdbdbd
-
     &-container
       font-size: 39px
       line-height: 1.2
       text-transform: uppercase
       width: 80%
+      color: white
+      display: block
+      &:hover
+        .link-gray
+          color: $gray-dark-color
+        .right-side-strip
+          img
+            transform: translateX(10px)
       .block
         display: inline-block
         vertical-align: middle
       .left-side-strip
         width: 60%
         font-weight: bold
-        a
-          color: white
-          &:hover
-            color: $gray-dark-color
+        .link-gray
+          transition: all 0.2s ease
       .right-side-strip
         width: 40%
+        img
+          transition: all 0.2s ease
 
 .our-hiring-process
   padding-top: 90px
