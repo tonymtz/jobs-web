@@ -128,6 +128,12 @@ $height-square : 140px
       left: 20px
       span
         display: block
+  .photos
+    display: block
+    &:hover
+      .photo-large
+        background-position-x: 0px
+
   .labs
     .photo-small
       background-color: $gray-black
@@ -149,6 +155,8 @@ $height-square : 140px
     border-right: 5px solid white
   .photo-large
     height: 400px
+    background-size: 110%
+    transition: all 0.5s ease
   .photo-small
     height: 400px
     .title-inside
