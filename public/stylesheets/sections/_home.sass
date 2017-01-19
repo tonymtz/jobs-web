@@ -26,23 +26,35 @@ $height-square : 140px
           display: flex
           align-items: flex-end
         .square-type-1
-          background-color: $orange-color
+          background-color: rgba($orange-color-2,0.9)
+          &:hover
+            background-color: $orange-color
         .square-type-2
-          background-color: $purpure-color
+          background-color: rgba($purpure-color,0.9)
+          &:hover
+            background-color: $purpure-color
           .in-text
             color: #eedae4
         .square-type-3
-          background-color: $aqua-color
+          background-color: rgba($aqua-color,0.9)
           width: 100%
+          &:hover
+            background-color: $aqua-color
         .square-type-4
-          background-color: $strong-yellow-color
+          background-color: rgba($strong-yellow-color,0.9)
+          &:hover
+            background-color: $strong-yellow-color
           .in-text
             color: $light-yellow-color
         .square-type-5
-          background-color: $strong-purpure-color
+          background-color: rgba($strong-purpure-color,0.9)
           width: 90%
+          &:hover
+            background-color: $strong-purpure-color
         .square-type-6
-          background-color: $dark-blue-color
+          background-color: rgba($dark-blue-color,0.9)
+          &:hover
+            background-color: $dark-blue-color
         &:first-child
           .square
             margin-left: auto
@@ -97,7 +109,7 @@ $height-square : 140px
     text-align: center
     display: inline-block
     font-size: 60px
-    font-weight: bold    
+    font-weight: bold
     &:after
       content: ""
       width: 50%
