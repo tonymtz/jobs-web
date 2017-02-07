@@ -45,7 +45,7 @@ function getNewToken(oauth2Client, callback) {
 
   console.log('Authorize this app by visiting this url: ', authUrl);
   return new Promise((resolve, reject) => {
-    fs.readFile("./config/code.json", (err, code) => {
+    fs.readFile(__dirname + "/../config/code.json", (err, code) => {
       if(err) {
         reject(err);
         return;
@@ -84,7 +84,7 @@ function authorize(credentials, callback) {
 
   return new Promise((resolve, reject) => {
     // Check if we have previously stored a token.
-    fs.readFile("./config/token.json", (err, token) => {
+    fs.readFile(__dirname + "/../config/token.json", (err, token) => {
       if (err) {
         resolve(getNewToken(oauth2Client, callback));
       } else {
@@ -102,7 +102,7 @@ function authorize(credentials, callback) {
 
 function storeToken(token) {
   return new Promise((resolve, reject) => {
-      fs.writeFile("./config/token.json", JSON.stringify(token), { flag: 'wx' }, (err) => {
+      fs.writeFile(__dirname + "/../config/token.json", JSON.stringify(token), { flag: 'wx' }, (err) => {
         if(err) {
           reject(err);
         } else {
