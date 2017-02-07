@@ -15,7 +15,7 @@ var credentials = env.CALENDAR_API;
 
 
 function saveCode(code) {
-  return new Promise((resolve, reject) => {  
+  return new Promise((resolve, reject) => {
     fs.writeFile("./config/code.json", JSON.stringify({code:code}), { flag: 'wx' }, (err) => {
       if(err) {
         reject(err);
@@ -112,6 +112,7 @@ function storeToken(token) {
 }
 
 function getEvents(auth) {
+  console.log(auth);
   return new Promise((resolve, reject) => {
 
     var calendar = google.calendar('v3');

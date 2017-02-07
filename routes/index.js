@@ -36,6 +36,86 @@ router.get('/life', function(req, res, next) {
 });
 
 router.get('/community', function(req, res, next) {
+
+  var images = [
+    {
+      title: "Applicate",
+      img: "applicate.png"
+    },
+    {
+      title: "Arduino",
+      img: "arduino.png"
+    },
+    {
+      title: "Chilango",
+      img: "chilango.png"
+    },
+    {
+      title: "Cloudio",
+      img: "cloudio.png"
+    },
+    {
+      title: "Code with us",
+      img: "code_with_us.png"
+    },
+    {
+      title: "Codeando",
+      img: "codeando.png"
+    },
+    {
+      title: "C#",
+      img: "csharp.png"
+    },
+    {
+      title: "DeKids",
+      img: "dekids.png"
+    },
+    {
+      title: "Dev Circles",
+      img: "dev_circles.png"
+    },
+    {
+      title: "Django Girls",
+      img: "django.png"
+    },
+    {
+      title: "elixir",
+      img: "elixir.png"
+    },
+    {
+      title: "Gophers",
+      img: "gophers.png"
+    },
+    {
+      title: "H/F",
+      img: "H_F.png"
+    },
+    {
+      title: "JVMMX",
+      img: "jvmmx.png"
+    },
+    {
+      title: "Nodeschool",
+      img: "nodeschool.png"
+    },
+    {
+      title: "NS Coders",
+      img: "ns_coders.png"
+    },
+    {
+      title: "The Data Pup",
+      img: "the_data_pub.png"
+    },
+    {
+      title: "upiicsa",
+      img: "upiicsa.jpg"
+    },
+    {
+      title: "Xamarin",
+      img: "xamarin.png"
+    },
+  ];
+
   GoogleCalendar.loadCalendar().then((events) => {
     var event = {}
     if(events.length) {
@@ -47,7 +127,7 @@ router.get('/community', function(req, res, next) {
         day: date.getDate()
       };
     }
-    res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID });
+    res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
   }).catch((err) => {
     console.log("Error: " + err);
   });
