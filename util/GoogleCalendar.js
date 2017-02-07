@@ -29,22 +29,11 @@ function getNewToken(oauth2Client, callback) {
     access_type: 'offline',
     scope: SCOPES
   });
-
+  
   console.log('Authorize this app by visiting this url: ', authUrl);
-
-  var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
   return new Promise((resolve, reject) => {
-    // rl.question('Enter the CODE from that page here: ', (code) => {
-    //   rl.close();
-    //
-    // });
     oauth2Client.getToken(credentials.CODE, (err, token) => {
       if (err) {
-        console.log('Error while trying to retrieve access token', err);
         reject(err);
         return;
       }
@@ -53,6 +42,7 @@ function getNewToken(oauth2Client, callback) {
         refresh_token: token.refresh_token,
         expiry_date: false
       });
+
       storeToken(token).then(() => {
         resolve(callback(oauth2Client));
       }).catch((err) => {
