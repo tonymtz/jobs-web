@@ -16,13 +16,15 @@ var credentials = env.CALENDAR_API;
 
 function saveCode(code) {
   return new Promise((resolve, reject) => {
-    fs.writeFile("./config/code.json", JSON.stringify({code:code}), { flag: 'wx' }, (err) => {
-      if(err) {
-        reject(err);
-      } else {
-        resolve("CODE saved succesfully");
-      }
-    });
+    if(code) {
+      fs.writeFile("./config/code.json", JSON.stringify({code:code}), { flag: 'wx' }, (err) => {
+        if(err) {
+          reject(err);
+        } else {
+          resolve("CODE saved succesfully");
+        }
+      });  
+    }
   });
 }
 
