@@ -13,17 +13,16 @@ var TOKEN_DIR = "../config/";
 var TOKEN_PATH = TOKEN_DIR + 'token.json';
 var credentials = env.CALENDAR_API;
 
-
 function saveCode(code) {
   return new Promise((resolve, reject) => {
     if(code) {
-      fs.writeFile("./config/code.json", JSON.stringify({code:code}), { flag: 'wx' }, (err) => {
+      fs.writeFile(__dirname + "/../config/code.json", JSON.stringify({code:code}), (err) => {
         if(err) {
           reject(err);
         } else {
           resolve("CODE saved succesfully");
         }
-      });  
+      });
     }
   });
 }
@@ -114,7 +113,6 @@ function storeToken(token) {
 }
 
 function getEvents(auth) {
-  console.log(auth);
   return new Promise((resolve, reject) => {
 
     var calendar = google.calendar('v3');
