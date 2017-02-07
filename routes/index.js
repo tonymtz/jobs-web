@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var env = require('../config/env');
 var YouTube = require('youtube-node');
+var GoogleCalendar = require("../util/GoogleCalendar.js");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -25,7 +26,18 @@ router.get('/life', function(req, res, next) {
 });
 
 router.get('/community', function(req, res, next) {
-  res.render('pages/comunity', { title: 'Nearsoft Community' });
+  GoogleCalendar.loadCalendar().then((events) => {
+    var date = new Date(Date.parse(events[0].start["dateTime"]));
+    var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    var event = {
+      title: events[0].summary,
+      month: months[date.getMonth()],
+      day: date.getDate()
+    };
+    res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID });
+  }).catch((err) => {
+    console.log("Error: " + err);
+  });
 });
 
 router.get('/open-position', function(req, res, next) {
@@ -37,7 +49,6 @@ router.get('/who-we-are', function(req, res, next) {
   var youTube = new YouTube();
   youTube.setKey(env.YOUTUBE_API_KEY);
   youTube.getPlayListsItemsById(env.YOUTUBE_LIST_ID, function(err, response) {
-    console.log(err);
     if(err){
       res.render("error", {error: err});
     }else {

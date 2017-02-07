@@ -1,5 +1,9 @@
 .community
   color: $dark-blue-color-3
+  .toggleCalendar
+    text-align: center
+    padding: 20px 0px
+    display: none
   &-header
     background-image: url('../images/ns-community.png')
     margin-top: 70px
@@ -35,6 +39,8 @@
           font-size: 0
           margin: 30px 20px
           position: relative
+          &:nth-child(3n+3)
+            margin-left: 250px
           .in-block
             width: 50%
             border: 7px solid $gray-dark-color
@@ -86,7 +92,14 @@
         .down-text
           border-top: 0px
           display: inline-block
-          transition: all 0.2s ease          
+          transition: all 0.2s ease
+          &.active
+            background-color: $orange-color-3
+            color: $white-gray-color
+          &:hover
+            cursor: pointer
+            background-color: $orange-color-3
+            color: $white-gray-color
       &.right-side
         background-color: $gray-dark-color
         color: white
@@ -207,6 +220,10 @@
         .square-text
           display: block
           text-align: center
+          &:hover
+            cursor: pointer
+            background-color: $orange-color-3
+            color: $white-gray-color
         &.left-side
           .upcoming
             font-size: 25px

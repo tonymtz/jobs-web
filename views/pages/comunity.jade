@@ -12,57 +12,41 @@ block content
         p Nearsoft forma parte de la mayoría de las comunidades de software en México, creando nuevos eventos y apoyando algunos de los que ya existen.
 
         p Queremos aprender y compartir lo que sabemos y la mejor manera de hacer esto es a través de la formación de redes dedicadas a transmitir conocimiento.
-
-    section.community-create-support
-      div.wrapper.wrapper-12
-        h2 
-          span Create & 
-          span Support
-      div.bb
-      div.community-create-support-description
-        div.wrapper.wrapper-12
-          div.row-blocks
-            div(class="block scroll-paralax" data-vel="-0.02")
-              div.in-block.img-create
-                div.in-create
-                  img(src="../images/events/sofe.png")
-              div.title-create.in-block
-                span SOFE
-            div(class="block scroll-paralax" data-vel="0.09")
-              div.in-block.img-create
-                div.in-create
-                  img(src="../images/events/docker.png")
-              div.title-create.in-block
-                span SOFE   
-                
-          div.row-blocks
-            div(class="block scroll-paralax" data-vel="-0.01")
-              div.in-block.img-create
-                div.in-create
-                  img(src="../images/events/django.png")
-              div.title-create.in-block
-                span SOFE
-            div(class="block scroll-paralax" data-vel="0.15")
-              div.in-block.img-create
-                div.in-create
-                  //- img(src="../images/events/sofe.png")
-                  h3 COMING SOON
-              div.title-create.in-block
-                span SOFE   
-
-    section.community-upcoming-events
-      div.block.half.left-side
-        span.upcoming.square-text UPCOMING EVENTS
-        div
-          div(class="square-text down-text") CALENDAR
-      div.block.half.right-side
-        div.calendar
-          div.month.square-text
-            span JULIO
-          div.day.square-text
-            span 23
-        div.event-text
-          span Oktober Talks - CDMX
+    //- section.community-create-support
+    //-   div.wrapper.wrapper-12
+    //-     h2 
+    //-       span Create & 
+    //-       span Support
+    //-   div.bb              
+    //-   div.community-create-support-description
+    //-     div.wrapper.wrapper-12          
+    //-       div.row-blocks                                           
+    //-         each event, i in events
+    //-           div(class="block scroll-paralax" data-vel="-0.02")
+    //-             div.in-block.img-create
+    //-               div.in-create
+    //-                 if event["attachments"]
+    //-                   img(src="https://drive.google.com/uc?export=view&id=#{event['attachments'][0].fileId}")
+    //-                 else
+    //-                   img(src="./images/default_calendar.png")
+    //-             div.title-create.in-block
+    //-               span #{event.summary}    
+    if event
+      section.community-upcoming-events
+        div.block.half.left-side
+          span.upcoming.square-text UPCOMING EVENTS
+          div
+            div(class="square-text down-text" id="toggleCalendar") CALENDAR
+        div.block.half.right-side
+          div.calendar
+            div.month.square-text
+              span #{event.month}
+            div.day.square-text
+              span #{event.day}
+          div.event-text
+            span #{event.title}
+      section.toggleCalendar
+        iframe(src="https://calendar.google.com/calendar/embed?src=#{CALENDARID}&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&height=600&wkst=1&bgcolor=%23ffcc99&ctz=America%2FHermosillo" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no")
 
     section.community-sponsorship
       div.wrapper.wrapper-11
