@@ -11,14 +11,14 @@ var googleAuth = require('google-auth-library');
 var SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 var TOKEN_DIR = "../config/";
 var TOKEN_PATH = TOKEN_DIR + 'token.json';
-var CALENDARID = process.env.CALENDARID;
+var credentials = env.CALENDAR_API;
 
 // Load client secrets from a local file.
 function loadCalendar() {
   return new Promise((resolve, reject) => {
     // Authorize a client with the loaded credentials, then call the
     // Google Calendar API.
-    var credentials = env.CALENDAR_API;
+
     resolve(authorize(credentials, getEvents));
   });
 }
@@ -38,25 +38,26 @@ function getNewToken(oauth2Client, callback) {
   });
 
   return new Promise((resolve, reject) => {
-    rl.question('Enter the CODE from that page here: ', (code) => {
-      rl.close();
-      oauth2Client.getToken(code, (err, token) => {
-        if (err) {
-          console.log('Error while trying to retrieve access token', err);
-          reject(err);
-          return;
-        }
-        oauth2Client.setCredentials({
-          access_token: token.access_token,
-          refresh_token: token.refresh_token,
-          expiry_date: false
-        });        
-        storeToken(token).then(() => {
-          resolve(callback(oauth2Client));
-        }).catch((err) => {
-          console.log(err);
-          reject(err);
-        });
+    // rl.question('Enter the CODE from that page here: ', (code) => {
+    //   rl.close();
+    //
+    // });
+    oauth2Client.getToken(credentials.CODE, (err, token) => {
+      if (err) {
+        console.log('Error while trying to retrieve access token', err);
+        reject(err);
+        return;
+      }
+      oauth2Client.setCredentials({
+        access_token: token.access_token,
+        refresh_token: token.refresh_token,
+        expiry_date: false
+      });
+      storeToken(token).then(() => {
+        resolve(callback(oauth2Client));
+      }).catch((err) => {
+        console.log(err);
+        reject(err);
       });
     });
   });
@@ -66,7 +67,6 @@ function authorize(credentials, callback) {
   var clientSecret = credentials.CLIENT_SECRET;
   var clientId = credentials.CLIENT_ID;
   var redirectUrl = credentials.REDIRECT_URL;
-  console.log(clientSecret);
   var auth = new googleAuth();
   var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
 
@@ -77,7 +77,6 @@ function authorize(credentials, callback) {
         resolve(getNewToken(oauth2Client, callback));
       } else {
         var jsonToken = JSON.parse(token);
-        console.log(jsonToken);
         oauth2Client.setCredentials({
           access_token: jsonToken.access_token,
           refresh_token: jsonToken.refresh_token,
@@ -107,7 +106,7 @@ function getEvents(auth) {
 
     calendar.events.list({
       auth: auth,
-      calendarId: CALENDARID,
+      calendarId: credentials.CALENDARID,
       timeMin: (new Date()).toISOString(),
       maxResults: 1,
       singleEvents: true,
@@ -131,5 +130,5 @@ module.exports = {
   getEvents:    getEvents,
   getNewToken:  getNewToken,
   loadCalendar: loadCalendar,
-  CALENDARID: CALENDARID
+  CALENDARID: credentials.CALENDARID
 };

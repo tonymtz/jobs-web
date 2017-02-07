@@ -27,13 +27,16 @@ router.get('/life', function(req, res, next) {
 
 router.get('/community', function(req, res, next) {
   GoogleCalendar.loadCalendar().then((events) => {
-    var date = new Date(Date.parse(events[0].start["dateTime"]));
-    var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-    var event = {
-      title: events[0].summary,
-      month: months[date.getMonth()],
-      day: date.getDate()
-    };
+    var event = {}
+    if(events.length) {
+      var date = new Date(Date.parse(events[0].start["dateTime"]));
+      var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      event = {
+        title: events[0].summary,
+        month: months[date.getMonth()],
+        day: date.getDate()
+      };
+    }
     res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID });
   }).catch((err) => {
     console.log("Error: " + err);
