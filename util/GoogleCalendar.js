@@ -13,12 +13,26 @@ var TOKEN_DIR = "../config/";
 var TOKEN_PATH = TOKEN_DIR + 'token.json';
 var credentials = env.CALENDAR_API;
 
+
+function saveCode(code) {
+  return new Promise((resolve, reject) => {
+    var codeJson = {
+      code: code
+    }
+    fs.writeFile("./config/code.json", JSON.stringify(codeJson), (err) => {
+      if(err)
+        reject(err);
+      else
+        resolve("CODE saved succesfully");
+    });
+  });
+}
+
 // Load client secrets from a local file.
 function loadCalendar() {
   return new Promise((resolve, reject) => {
     // Authorize a client with the loaded credentials, then call the
     // Google Calendar API.
-
     resolve(authorize(credentials, getEvents));
   });
 }
@@ -29,26 +43,35 @@ function getNewToken(oauth2Client, callback) {
     access_type: 'offline',
     scope: SCOPES
   });
-  
+
   console.log('Authorize this app by visiting this url: ', authUrl);
   return new Promise((resolve, reject) => {
-    oauth2Client.getToken(credentials.CODE, (err, token) => {
-      if (err) {
+    fs.readFile("./config/code.json", (err, code) => {
+      if(err) {
         reject(err);
         return;
-      }
-      oauth2Client.setCredentials({
-        access_token: token.access_token,
-        refresh_token: token.refresh_token,
-        expiry_date: false
-      });
+      } else {
+        var code = JSON.parse(code).code;
+        oauth2Client.getToken(code, (err, token) => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          oauth2Client.setCredentials({
+            access_token: token.access_token,
+            refresh_token: token.refresh_token,
+            expiry_date: false
+          });
 
-      storeToken(token).then(() => {
-        resolve(callback(oauth2Client));
-      }).catch((err) => {
-        console.log(err);
-        reject(err);
-      });
+          storeToken(token).then(() => {
+            resolve(callback(oauth2Client));
+          }).catch((err) => {
+            console.log(err);
+            reject(err);
+          });
+        });
+      }
+
     });
   });
 }
@@ -80,12 +103,13 @@ function authorize(credentials, callback) {
 
 function storeToken(token) {
   return new Promise((resolve, reject) => {
-    try {
-      fs.writeFile("./config/token.json", JSON.stringify(token));
-      resolve('Token stored to ' + TOKEN_PATH);
-    } catch (e) {
-      reject(e);
-    }
+      fs.writeFile("./config/token.json", JSON.stringify(token), { flag: 'wx' }, (err) => {
+        if(err) {
+          reject(err);
+        } else {
+          resolve('Token stored to ' + TOKEN_PATH);
+        }
+      });
   });
 }
 
@@ -120,5 +144,6 @@ module.exports = {
   getEvents:    getEvents,
   getNewToken:  getNewToken,
   loadCalendar: loadCalendar,
-  CALENDARID: credentials.CALENDARID
+  CALENDARID:   credentials.CALENDARID,
+  saveCode:     saveCode
 };

@@ -5,3 +5,4 @@ node_modules
 public/vendor
 npm-debug.log
 config/token.json
+config/code.json

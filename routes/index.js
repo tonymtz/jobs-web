@@ -6,7 +6,17 @@ var GoogleCalendar = require("../util/GoogleCalendar.js");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('pages/home', { title: 'Nearsoft Home' });
+  if (req.query.code) {
+    GoogleCalendar.saveCode(req.query.code).then((message) => {
+      console.log(message);
+      res.redirect("/");
+    }).catch((err) => {
+      console.log(err);
+      res.render('pages/home', { title: 'Nearsoft Home' });
+    });
+  } else {
+    res.render('pages/home', { title: 'Nearsoft Home' });
+  }
 });
 
 router.get('/contact', function(req, res, next) {
@@ -58,6 +68,7 @@ router.get('/who-we-are', function(req, res, next) {
       res.render('pages/who', { title: 'Nearsoft This is Who We Are', videos: response.items });
     }
   });
+
 });
 
 module.exports = router;
