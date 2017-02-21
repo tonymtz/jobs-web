@@ -26,6 +26,8 @@
 
 .introduction
   margin-bottom: 20px
+  .text-body
+    padding-left: 0
 
 .gray-background
   background-color: $light-gray-color
@@ -220,3 +222,45 @@ li
 
   .align-middle
     text-align: center
+
+
+@media (max-width:500px)
+  .close-button
+    font-size: 80px
+    transform: translateX(-10px)
+  .pop-up
+    p
+      font-size: 22px
+      text-align: left
+    .frame
+      margin: 10px 10px
+  .programas-title
+    margin-top: 20px
+    h1
+      font-size: 50px
+      line-height: 50px
+  .goals
+    .goals-description
+      h1
+        font-size: 50px
+        text-align: center
+        line-height: 50px
+  .how-to-apply
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      li
+        padding: 10px 0px
+        margin-top: 0
+        display: block
+        &:nth-child(3n+1)
+          border-bottom: 1px solid #e2e2e2
+        span
+          margin-left: 0px
+          text-align: left
+        &:before
+          display: none
+    h1
+      font-size: 50px
+      line-height: 50px
