@@ -103,6 +103,8 @@
 .products
   margin-top: 40px
   margin-bottom: 180px
+  .products-lists
+    display: flex
 
   .products-title
     padding: 10px
@@ -154,12 +156,21 @@
   margin-top: 10px
   margin-bottom: 60px
   .code-container
-    background-color: $white-gray-color
+    background-color: $code-background
+    border: 1px solid $white-gray-color
+    .code-string
+      color: $code-string
+    .code-class
+      color: $code-class
+    .code-parentesis
+      color: $code-parentesis
+    .code-function
+      color: $code-function
 
   .code-content
     font-family: monospace
     font-size: 16px
-    padding: 50px 0 50px 0
+    padding: 50px 0
     color: $orange-color
 
 .gallery
@@ -182,13 +193,35 @@
         background-attachment: fixed
         box-shadow: inset 2px 2px 32px rgba(0,0,0,0.3)
 
-    //handling small screen
-    @media(max-width: 500px)
-      .photo-small
-        margin-right: 0
-        width: 35%
-      .fill-photo
-        height: 150px
+//handling small screen
+@media(max-width: $break-small)
+  .section-title
+    h2
+      font-size: 40px
+      text-align: center
+      display: block
+      width: 100%
+  .products
+    .products-title
+      h3
+        font-size: 40px
+    .products-lists
+      display: block
+  .news-content
+    .content-text
+      margin-bottom: 30px
+    .content-wrapper
+      text-align: left
+  .products
+    margin-bottom: 50px
+  .labs-header
+    padding-top: 30px
+    h1
+      font-size: 40px
+      margin-bottom: 10px
+  .gallery
+    .gallery-container
+      display: none
 
 @media (max-width: $break-medium)
   .products
