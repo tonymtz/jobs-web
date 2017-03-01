@@ -51,7 +51,7 @@
 
 .where-are-we
   padding-top: 50px
-  margin-bottom: 200px  
+  margin-bottom: 200px
   h4
     color: $orange-color-3
     font-weight: bold
@@ -98,12 +98,17 @@
       font-weight: bold
   .list-videos
     li
-      display: inline-block
       padding: 5px
       width: 20%
       vertical-align: top
+      overflow: hidden
+      .link-text
+        padding: 5px
+        display: block
+        strong
+          color: $orange-color
       .wrap-img
-        height: 150px
+        height: 200px
         position: relative
         display: block
         &:hover
@@ -111,8 +116,6 @@
             background-color: rgba(0,0,0,0.3)
             i
               opacity: 1
-          strong
-            color: $orange-color
         .mask
           width: 100%
           overflow: hidden
@@ -152,6 +155,24 @@
       padding: 0 40px
 
 @media (max-width: $break-medium)
+  .where-are-we
+    .row-where
+      .block
+        &:before
+          text-align: center
+          font-weight: bold
+        &.middle
+          border-width: 0
+  .who-section
+    .block
+      h4
+        font-size: 45px
+        line-height: 50px
+        margin-top: 20px
+      p
+        width: 95%
+        margin: 0 auto
+        font-size: 20px
   .where-are-we
     margin-bottom: 50px
     .row-header
@@ -225,4 +246,5 @@
       width: 100%
     .nice-title-who
       font-size: 35px
+      line-height: 40px
       text-align: center

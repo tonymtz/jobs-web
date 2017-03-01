@@ -7,12 +7,12 @@ html
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.css')
     link(rel='stylesheet', href='/dist/styles.css')
     link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png")
+    script(src='/vendor/jquery/dist/jquery.js')
   body
     include ./partials/_side_menu.jade
     include ./partials/_menu.jade
     div.wrap-content      
       block content      
-      include ./partials/_footer.jade
-    script(src='/vendor/jquery/dist/jquery.js')
+      include ./partials/_footer.jade    
     script(src='/vendor/foundation-sites/dist/js/foundation.min.js')
     script(src='/dist/built.js')
