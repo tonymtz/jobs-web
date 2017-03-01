@@ -31,11 +31,9 @@
       $.each(blocks, (i, e) => {
         var vel = $(e).data('vel');
         var finalTopPosition = vel * windowTop;
-        console.log(finalTopPosition);
         $(e).css({'top': -finalTopPosition+"px"});
       });
     }
-
 
   });
 })();
