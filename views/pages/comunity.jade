@@ -3,8 +3,8 @@ extends ../layout
 block content
   div.community
     header.community-header.nice-scroll-img.coverimage.stretch-height
-      h1 
-        span What is 
+      h1
+        span What is
         span NS Community?
 
     section.community-description
@@ -14,38 +14,53 @@ block content
         p Queremos aprender y compartir lo que sabemos y la mejor manera de hacer esto es a través de la formación de redes dedicadas a transmitir conocimiento.
     section.community-create-support
       div.wrapper.wrapper-12
-        h2 
-          span Create & 
+        h2
+          span Create &amp;
           span Support
       div.bb              
       div.community-create-support-description
-        div.wrapper.wrapper-12          
+        div.wrapper.wrapper-12
           div.row-blocks
-            each img, i in images
-              div(class="block")
-                div.in-block.img-create
-                  div.in-create
-                    img(src="images/events/#{img.img}")
-                    div.title-create
-                      span #{img.title}                          
-            
-    if event.lenght
-      section.community-upcoming-events
-        div.block.half.left-side
-          span.upcoming.square-text UPCOMING EVENTS
-          div
-            div(class="square-text down-text" id="toggleCalendar") CALENDAR
-        div.block.half.right-side
-          div.calendar
-            div.month.square-text
-              span #{event.month}
-            div.day.square-text
-              span #{event.day}
-          div.event-text
-            span #{event.title}
-      section.toggleCalendar
-        iframe(src="https://calendar.google.com/calendar/embed?src=#{CALENDARID}&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&height=600&wkst=1&bgcolor=%23ffcc99&ctz=America%2FHermosillo" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no")
+            div(class="block scroll-paralax" data-vel="-0.02")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/sofe.png" role="presentation")
+              div.title-create.in-block
+                span SOFE
+            div(class="block scroll-paralax" data-vel="0.09")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/docker.png" role="presentation")
+              div.title-create.in-block
+                span Docker
+          div.row-blocks
+            div(class="block scroll-paralax" data-vel="-0.01")
+              div.in-block.img-create
+                div.in-create
+                  img(src="../images/events/django.png" role="presentation")
+              div.title-create.in-block
+                span SOFE
+            div(class="block scroll-paralax" data-vel="0.15")
+              div.in-block.img-create
+                div.in-create
+                  //- img(src="../images/events/sofe.png")
+                  h3 COMING SOON
+              div.title-create.in-block
+                span SOFE
 
+    section.community-upcoming-events
+      div.block.half.left-side
+        span.upcoming.square-text UPCOMING EVENTS
+        div
+          div(class="square-text down-text") CALENDAR
+      div.block.half.right-side
+        div.calendar
+          div.month.square-text
+            span JULIO
+          div.day.square-text
+            span 23
+        div.event-text
+          span Oktober Talks - CDMX
     section.community-sponsorship
       div.wrapper.wrapper-11
         h2 Need a <br> sponsorship?
@@ -56,5 +71,5 @@ block content
 
             p Nosotros nos pondremos en contacto contigo. Recuerda que podemos apoyarte con el uso de nuestras instalaciones para los meetups y/o con speakers para congresos y eventos especiales.
 
-            p.mail 
+            p.mail
               a(href="mailto:community@nearsoft.com") community@nearsoft.com

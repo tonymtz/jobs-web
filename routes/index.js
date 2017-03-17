@@ -6,17 +6,19 @@ var GoogleCalendar = require("../util/GoogleCalendar.js");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  if (req.query.code) {
-    GoogleCalendar.saveCode(req.query.code).then((message) => {
-      console.log(message);
-      res.redirect("/");
-    }).catch((err) => {
-      console.log(err);
-      res.render('pages/home', { title: 'Nearsoft Home' });
-    });
-  } else {
-    res.render('pages/home', { title: 'Nearsoft Home' });
-  }
+  var event = {};
+  res.render('pages/home', { title: 'Nearsoft Home', event: event });
+  // if (req.query.code) {
+  //   GoogleCalendar.saveCode(req.query.code).then((message) => {
+  //     console.log(message);
+  //     res.redirect("/");
+  //   }).catch((err) => {
+  //     console.log(err);
+  //     res.render('pages/home', { title: 'Nearsoft Home' });
+  //   });
+  // } else {
+  //   res.render('pages/home', { title: 'Nearsoft Home' });
+  // }
 });
 
 router.get('/contact', function(req, res, next) {
@@ -129,22 +131,26 @@ router.get('/community', function(req, res, next) {
     }
     res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
   }).catch((err) => {
-    console.log("Error: " + err);
+    console.log("Authorize this app by visiting this url: " + url);
+    res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
+  }).finally(() => {
+    res.render('pages/comunity', { title: 'Nearsoft Community', event: [], CALENDARID: GoogleCalendar.CALENDARID, images:images });
   });
 });
 
-router.get('/open-position', function(req, res, next) {
+router.get('/open-position', (req, res, next) => {
   res.render('pages/position', { title: 'Nearsoft Open Positions' });
 });
 
-router.get('/who-we-are', function(req, res, next) {
+router.get('/who-we-are', (req, res, next) => {
 
   var youTube = new YouTube();
   youTube.setKey(env.YOUTUBE_API_KEY);
   youTube.getPlayListsItemsById(env.YOUTUBE_LIST_ID, function(err, response) {
-    if(err){
-      res.render("error", {error: err});
-    }else {
+    console.log(err);
+    if (err) {
+      res.render("error", { error: err, title: 'Error' });
+    } else {
       res.render('pages/who', { title: 'Nearsoft This is Who We Are', videos: response.items });
     }
   });

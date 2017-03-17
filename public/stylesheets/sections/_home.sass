@@ -1,9 +1,32 @@
 $height-header : 750px
 $height-square : 140px
+
+body
+  .modal
+    .modal-wrap
+      background-color: $white-gray-color
+      .new-article
+        border-bottom: 1px solid $gray-black
+        padding: 15px 0px
+        .right
+          text-align: right
+          a
+            text-align: right
+            display: inline-block
+            color: $white-gray-color
+            background-color: $code-background
+            border-radius: 5px
+            padding: 5px 10px
+            border: 1px solid $gray-black
+        &:last-child
+          border-bottom: 0px
+
 .home-header
   height: $height-header
   overflow: hidden
   position: relative
+  h1
+    display: none
   .squares
     position: absolute
     bottom: 0
@@ -154,6 +177,8 @@ $height-square : 140px
       background-color: $dark-blue-color
   .news
     margin-bottom: 5px
+    &:hover
+      cursor: pointer
     .photo-small
       background-color: $aqua-color
   .hmo
@@ -188,20 +213,76 @@ $height-square : 140px
     padding: 0 50px
 
 @media screen and (max-width: $break-medium)
+  .squares
+    display: none
+  .video
+    video
+      display: none
   .home-bottom
+    .photos
+      position: relative
+    .news
+      .photo-small
+        background-color: rgba($aqua-color, 0.5)
+    .hmo
+      .photo-small
+        background-color: rgba($yellow-color, 0.5)
+    .cuu
+      .photo-small
+        background-color: rgba($code-background, 0.5)
+    .labs
+      .photo-small
+        background-color: rgba($gray-dark-color, 0.5)
+    .ns-places
+      height: auto
+      text-align: center
+      background-color: white
+      margin-top: 40px
+      .map
+        display: none
+      .title-places
+        position: initial
+        span
+          display: inline-block
+          font-size: 45px
+          line-height: 50px
+          margin: 0 5px
+          color: $melon-color
     .wrapper-12
       padding: 10px
     .welcome
       font-size: 35px
       margin-top: 20px
+      display: none
     .photo-small
       width: 100%
       border-right: 0
       border-left: 0px
+      background-size: cover
+      position: absolute
+      left: 0
     .photo-large
       width: 100%
       border-left: 0px
+      background-size: cover
   .home-header
+    display: flex
+    align-items: center
+    justify-content: center
+    h1
+      display: block
+      width: 95%
+      margin: 0 auto
+      z-index: 100
+      font-size: 60px
+      text-align: center
+      color: white
+      line-height: 65px
+      font-weight: bold
+    .mask
+      background-image: url('../images/home.png')
+      background-size: cover
+      background-position: 50%
     .squares
       width: 100%
       position: relative

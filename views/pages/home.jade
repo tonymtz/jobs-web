@@ -1,7 +1,35 @@
 extends ../layout
 
 block content
+  link(rel='stylesheet', href="vendor/pure-css-modal/css/modal.css")
+  div.modal
+    input(id="modal-trigger" class="checkbox" type="checkbox")
+    div.modal-overlay
+      label(for="modal-trigger" class="o-close")
+      div.modal-wrap
+        label(for="modal-trigger" class="close") &#10006;
+        article.new-article
+          h2 This is the modal content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
+          div.right
+            a(href="#") Leer noticia completa
+        article.new-article
+          h2 This is the modal content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
+          div.right
+            a(href="#") Leer noticia completa
+        article.new-article
+          h2 This is the modal content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
+          div.right
+            a(href="#") Leer noticia completa
+        article.new-article
+          h2 This is the modal content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
+          div.right
+            a(href="#") Leer noticia completa
   header.home-header.stretch-height-with
+    h1 Welcome to the magic    
     div.squares
       div.row-square
         div.half          
@@ -38,11 +66,11 @@ block content
       video(autoplay muted loop class="stretch-height-with")
         source(src="files/video_loop.mp4")
       //- iframe(src="https://www.youtube.com/embed/DlLHc7CS914?autoplay=1&color=red&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen)    
-  section.home-bottom
+  section.home-bottom    
     div.wrapper.wrapper-12
       div.center
         h3.welcome Welcome to the Magic!
-      div.photos.news       
+      label(for="modal-trigger" class="photos news")      
         div.photo-small.block.block-type-2.left-type
           div.title-inside.title-inside-white
             span News
@@ -50,7 +78,7 @@ block content
       div.ns-places
         div.map           
         div.title-places
-          span Ns
+          span NS
           span Places
       a.photos.hmo(href="https://www.youtube.com/watch?v=CVYovFnpQXo")
         div(class="photo-large coverimage block" style="background-image: url('images/photo_7.png')")

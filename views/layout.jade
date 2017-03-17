@@ -3,16 +3,17 @@ html
   head
     title= title
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel='stylesheet', href='/vendor/foundation-sites/dist/css/foundation.css')
-    link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.css')
-    link(rel='stylesheet', href='/dist/styles.css')
-    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png")
-    script(src='/vendor/jquery/dist/jquery.js')
+    link(rel="stylesheet", href="/vendor/foundation-sites/dist/css/foundation.css")
+    link(rel="stylesheet", href="/vendor/font-awesome/css/font-awesome.css")
+    link(rel="stylesheet", href="/dist/styles.css")
+    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png")    
   body
     include ./partials/_side_menu.jade
     include ./partials/_menu.jade
-    div.wrap-content      
-      block content      
-      include ./partials/_footer.jade    
-    script(src='/vendor/foundation-sites/dist/js/foundation.min.js')
-    script(src='/dist/built.js')
+    div.wrap-content
+      block content
+      include ./partials/_footer.jade
+    script(src="/vendor/jquery/dist/jquery.js")
+    script(src="/vendor/slick-carousel/slick/slick.js")
+    script(src="/vendor/foundation-sites/dist/js/foundation.min.js")
+    script(src="/dist/built.js")

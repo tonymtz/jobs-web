@@ -42,12 +42,11 @@ function getNewToken(oauth2Client, callback) {
     access_type: 'offline',
     scope: SCOPES
   });
-
-  console.log('Authorize this app by visiting this url: ', authUrl);
+  
   return new Promise((resolve, reject) => {
     fs.readFile(__dirname + "/../config/code.json", (err, code) => {
       if(err) {
-        reject(err);
+        reject(authUrl);
         return;
       } else {
         var code = JSON.parse(code).code;
@@ -56,9 +55,10 @@ function getNewToken(oauth2Client, callback) {
             reject(err);
             return;
           }
+
           oauth2Client.setCredentials({
             access_token: token.access_token,
-            refresh_token: token.refresh_token,
+            refresh_token: jsonToken.refresh_token,
             expiry_date: false
           });
 
