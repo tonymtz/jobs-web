@@ -38,9 +38,9 @@ router.get('/who-we-are', function(req, res, next) {
   youTube.setKey(env.YOUTUBE_API_KEY);
   youTube.getPlayListsItemsById(env.YOUTUBE_LIST_ID, function(err, response) {
     console.log(err);
-    if(err){
-      res.render("error", {error: err});
-    }else {
+    if (err) {
+      res.render("error", { error: err, title: 'Error' });
+    } else {
       res.render('pages/who', { title: 'Nearsoft This is Who We Are', videos: response.items });
     }
   });

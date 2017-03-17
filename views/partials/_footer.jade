@@ -3,7 +3,8 @@ footer.footer
     div.wrap-stripe
       div.stripe
         a(href="/")
-          img(src="/images/white_logo.png")
+          span.show-for-sr Link to homepage
+          img(src="/images/white_logo.png" role="presentation")
     div.wrap-blocks
       div.top-block
         div.block.third
@@ -19,21 +20,24 @@ footer.footer
             div.cell.half
               a(href="mailto:jobs@nearsoft.com")
                 b Contact Us
-            div.cell.half              
             div.cell.half
-              a(href="#")
+            div.cell.half
                 //- b FAQ
             div.cell.half
-              a(class="social" href="https://www.facebook.com/nearsoftjobs/" target="_blank")
+              a(class="social" href="https://www.facebook.com/nearsoftjobs/" target="_blank" rel="noopener")
+                span.show-for-sr Link to Facebook profile
                 i.fa.fa-facebook(aria-hidden="true")
-              a(class="social" href="https://twitter.com/NearsoftJobs" target="_blank")
-                i.fa.fa-twitter
-              a(class="social" href="https://instagram.com/nearsoftjobs/" target="_blank")
-                i.fa.fa-instagram
-              a(class="social" href="https://plus.google.com/116933911049244562188" target="_blank")
-                i.fa.fa-google-plus                          
+              a(class="social" href="https://twitter.com/NearsoftJobs" target="_blank" rel="noopener")
+                span.show-for-sr Link to Twitter profile
+                i.fa.fa-twitter(aria-hidden="true")
+              a(class="social" href="https://instagram.com/nearsoftjobs/" target="_blank" rel="noopener")
+                span.show-for-sr Link to Instragram profile
+                i.fa.fa-instagram(aria-hidden="true")
+              a(class="social" href="https://plus.google.com/116933911049244562188" target="_blank" rel="noopener")
+                span.show-for-sr Link to Google Plus profile
+                i.fa.fa-google-plus(aria-hidden="true")
       div.bottom-block
         div.block
           //- a(href="#")
-          //-   b Terms & Conditions
-  
+          //-   b Terms &amp; Conditions
+
