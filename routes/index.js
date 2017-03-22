@@ -3,6 +3,7 @@ var router = express.Router();
 var env = require('../config/env');
 var YouTube = require('youtube-node');
 var GoogleCalendar = require("../util/GoogleCalendar.js");
+var sm = require('sitemap');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -155,6 +156,32 @@ router.get('/who-we-are', (req, res, next) => {
     }
   });
 
+});
+
+router.get('/sitemap.xml', (req, res, next) => {
+
+  sitemap = sm.createSitemap ({
+      hostname: 'http://nearsoftjobs.com',
+      cacheTime: 600000,        // 600 sec - cache purge period
+      urls: [
+        { url: '/', changefreq: 'weekly'},
+        { url: '/who-we-are', changefreq: 'weekly'},
+        { url: '/open-position' },
+        { url: '/contact'},
+        { url: '/labs', changefreq: 'monthly'},
+        { url: '/internship'},
+        { url: '/community', },
+        { url: '/life'}
+      ]
+    });
+
+  sitemap.toXML((err, xml) => {
+    if(err) {
+      return res.status(500).end();
+    }
+    res.header('Content-Type', 'application/xml');
+     res.send( xml );
+  })
 });
 
 module.exports = router;
