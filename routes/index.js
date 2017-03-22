@@ -159,20 +159,14 @@ router.get('/who-we-are', (req, res, next) => {
 });
 
 router.get('/sitemap.xml', (req, res, next) => {
-
+  var routes = [];
+  for (var layer of router.stack) {
+    routes.push({url: layer.route.path, changefreq: 'monthly'});
+  }
   sitemap = sm.createSitemap ({
       hostname: 'http://nearsoftjobs.com',
       cacheTime: 600000,        // 600 sec - cache purge period
-      urls: [
-        { url: '/', changefreq: 'weekly'},
-        { url: '/who-we-are', changefreq: 'weekly'},
-        { url: '/open-position' },
-        { url: '/contact'},
-        { url: '/labs', changefreq: 'monthly'},
-        { url: '/internship'},
-        { url: '/community', },
-        { url: '/life'}
-      ]
+      urls: routes
     });
 
   sitemap.toXML((err, xml) => {
