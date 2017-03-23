@@ -130,12 +130,12 @@ router.get('/community', function(req, res, next) {
         day: date.getDate()
       };
     }
-    res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
+    res.render('pages/community', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
   }).catch((err) => {
     console.log("Authorize this app by visiting this url: " + url);
-    res.render('pages/comunity', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
+    res.render('pages/community', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
   }).finally(() => {
-    res.render('pages/comunity', { title: 'Nearsoft Community', event: [], CALENDARID: GoogleCalendar.CALENDARID, images:images });
+    res.render('pages/community', { title: 'Nearsoft Community', event: [], CALENDARID: GoogleCalendar.CALENDARID, images:images });
   });
 });
 
@@ -164,10 +164,10 @@ router.get('/sitemap.xml', (req, res, next) => {
     routes.push({url: layer.route.path, changefreq: 'monthly'});
   }
   sitemap = sm.createSitemap ({
-      hostname: 'http://nearsoftjobs.com',
-      cacheTime: 600000,        // 600 sec - cache purge period
-      urls: routes
-    });
+    hostname: 'http://nearsoftjobs.com',
+    cacheTime: 600000,        // 600 sec - cache purge period
+    urls: routes
+  });
 
   sitemap.toXML((err, xml) => {
     if(err) {
