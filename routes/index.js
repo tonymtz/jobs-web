@@ -4,11 +4,18 @@ var env = require('../config/env');
 var YouTube = require('youtube-node');
 var GoogleCalendar = require("../util/GoogleCalendar.js");
 var sm = require('sitemap');
+var fs = require("fs");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var event = {};
-  res.render('pages/home', { title: 'Nearsoft Home', event: event });
+  fs.readFile("util/news.json", 'utf8', (err, data) => {
+    if(err) throw err;
+    var news = JSON.parse(data);
+    console.log(news);
+    res.render('pages/home', { title: 'Nearsoft Home', news: news});
+  });
+
+
   // if (req.query.code) {
   //   GoogleCalendar.saveCode(req.query.code).then((message) => {
   //     console.log(message);
@@ -119,24 +126,28 @@ router.get('/community', function(req, res, next) {
     },
   ];
 
-  GoogleCalendar.loadCalendar().then((events) => {
-    var event = {}
-    if(events.length) {
-      var date = new Date(Date.parse(events[0].start["dateTime"]));
-      var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-      event = {
-        title: events[0].summary,
-        month: months[date.getMonth()],
-        day: date.getDate()
-      };
-    }
-    res.render('pages/community', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
-  }).catch((err) => {
-    console.log("Authorize this app by visiting this url: " + url);
-    res.render('pages/community', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
-  }).finally(() => {
-    res.render('pages/community', { title: 'Nearsoft Community', event: [], CALENDARID: GoogleCalendar.CALENDARID, images:images });
-  });
+
+  res.render("pages/community", {title: "NS Community", images: images, CALENDARID: GoogleCalendar.CALENDARID});
+
+
+  // GoogleCalendar.loadCalendar().then((events) => {
+  //   var event = {}
+  //   if(events.length) {
+  //     var date = new Date(Date.parse(events[0].start["dateTime"]));
+  //     var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+  //     event = {
+  //       title: events[0].summary,
+  //       month: months[date.getMonth()],
+  //       day: date.getDate()
+  //     };
+  //   }
+  // }).catch((err) => {
+  //   console.log("here");
+  //   var event = {};
+  //   // res.render('pages/community', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
+  // }).finally(() => {
+  //   // res.render('pages/community', { title: 'Nearsoft Community', event: [], CALENDARID: GoogleCalendar.CALENDARID, images:images });
+  // });
 });
 
 router.get('/open-position', (req, res, next) => {

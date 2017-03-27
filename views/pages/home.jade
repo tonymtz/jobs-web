@@ -8,26 +8,12 @@ block content
       label(for="modal-trigger" class="o-close")
       div.modal-wrap
         label(for="modal-trigger" class="close") &#10006;
-        article.new-article
-          h2 This is the modal content
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
-          div.right
-            a(href="#") Leer noticia completa
-        article.new-article
-          h2 This is the modal content
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
-          div.right
-            a(href="#") Leer noticia completa
-        article.new-article
-          h2 This is the modal content
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
-          div.right
-            a(href="#") Leer noticia completa
-        article.new-article
-          h2 This is the modal content
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cum sequi maxime officia provident voluptatibus aut! Non autem asperiores repellat architecto laboriosam officiis ab libero enim illo animi, error alias.  
-          div.right
-            a(href="#") Leer noticia completa
+        if news
+          for i in news
+            article.new-article
+              h2 #{i.title}
+              p #{i.description}
+            
   header.home-header.stretch-height-with
     h1 Welcome to the magic    
     div.squares
