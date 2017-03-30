@@ -18,13 +18,13 @@ block content
       div.code-container
         div.code-content.small-9.small-centered
           p
-            | NearsoftLabs nsLabs = NearsoftLabs</br></br>
-            | &emsp;&emsp;&emsp;&emsp;.description("Para lograr esto, sabemos que tenemos que ser capaces de identificar problemas, encontrar las oportunidades que se presentan y construir soluciones para hacer de la innovación, una parte muy importante de Nearsoft y que se grabe en nuestro ADN.</br></br>
-            | Nearsoft Labs es el equipo que ayuda al resto del team a convertir esas oportunidades identificadas por la comunidad, en productos y servicios para la industria del software.")</br></br>
-            | &emsp;&emsp;&emsp;&emsp;.latitude(-34.397)</br>
-            | &emsp;&emsp;&emsp;&emsp;.longitude(150.644)</br>
-            | &emsp;&emsp;&emsp;&emsp;.zoom( 8 )</br>
-            | &emsp;&emsp;&emsp;&emsp;.buildAwesomeness();</br>
+            | <span class='code-class'>NearsoftLabs</span> nsLabs <span class='code-parentesis'>=</span> NearsoftLabs
+            |<span class='code-function'>.description</span><span class='code-parentesis'>(</span><span class='code-string'>"Para lograr esto, sabemos que tenemos que ser capaces de identificar problemas, encontrar las oportunidades que se presentan y construir soluciones para hacer de la innovación, una parte muy importante de Nearsoft y que se grabe en nuestro ADN.</br>
+            | Nearsoft Labs es el equipo que ayuda al resto del team a convertir esas oportunidades identificadas por la comunidad, en productos y servicios para la industria del software."</span><span class='code-parentesis'>)</span></br>
+            | <span class='code-function'>.latitude</span><span class='code-parentesis'>(</span>-34.397<span class='code-parentesis'>)</span></br>
+            | <span class='code-function'>.longitude</span><span class='code-parentesis'>(</span>150.644<span class='code-parentesis'>)</span></br>
+            | <span class='code-function'>.zoom</span><span class='code-parentesis'>(</span>8<span class='code-parentesis'>)</span></br>
+            | <span class='code-function'>.buildAwesomeness</span><span class='code-parentesis'>();</span></br>
 
         div.scroll
           img.scroll-icon(src="images/scroll.png" alt="scroll icon")
@@ -84,11 +84,12 @@ block content
             li.product-item
               a(href="http://www.nuuk.me/") Nuuk
             li.product-item
-              a(href="#") RideAsOne
+              span RideAsOne
         div.products-list.small-12.medium-6
           ul.products-items
             li.product-item
-              a(href="#") ApiToCode
+              span ApiToCode
             li.product-item
-              a(href="#") Ikigai
-            li.product-item And more to come...
+              span Ikigai
+            li.product-item
+              span Qualitrack              

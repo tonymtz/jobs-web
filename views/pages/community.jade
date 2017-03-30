@@ -12,42 +12,20 @@ block content
         p Nearsoft forma parte de la mayoría de las comunidades de software en México, creando nuevos eventos y apoyando algunos de los que ya existen.
 
         p Queremos aprender y compartir lo que sabemos y la mejor manera de hacer esto es a través de la formación de redes dedicadas a transmitir conocimiento.
-
     section.community-create-support
       div.wrapper.wrapper-12
         h2
           span Create &amp;
           span Support
-      div.bb
+      div.bb              
       div.community-create-support-description
         div.wrapper.wrapper-12
-          div.row-blocks
-            div(class="block scroll-paralax" data-vel="-0.02")
-              div.in-block.img-create
-                div.in-create
-                  img(src="../images/events/sofe.png" role="presentation")
-              div.title-create.in-block
-                span SOFE
-            div(class="block scroll-paralax" data-vel="0.09")
-              div.in-block.img-create
-                div.in-create
-                  img(src="../images/events/docker.png" role="presentation")
-              div.title-create.in-block
-                span Docker
-          div.row-blocks
-            div(class="block scroll-paralax" data-vel="-0.01")
-              div.in-block.img-create
-                div.in-create
-                  img(src="../images/events/django.png" role="presentation")
-              div.title-create.in-block
-                span SOFE
-            div(class="block scroll-paralax" data-vel="0.15")
-              div.in-block.img-create
-                div.in-create
-                  //- img(src="../images/events/sofe.png")
-                  h3 COMING SOON
-              div.title-create.in-block
-                span SOFE
+          div.row-blocks            
+            for i in images
+              div(class="block scroll-paralax" data-vel="-0.02")
+                div.in-block.img-create
+                  div.in-create
+                    img(src="../images/events/#{i.img}" role="presentation")
 
     section.community-upcoming-events
       div.block.half.left-side
@@ -59,10 +37,9 @@ block content
           div.month.square-text
             span JULIO
           div.day.square-text
-            span 23
+            span 29
         div.event-text
-          span Oktober Talks - CDMX
-
+          span SummerTalks
     section.community-sponsorship
       div.wrapper.wrapper-11
         h2 Need a <br> sponsorship?

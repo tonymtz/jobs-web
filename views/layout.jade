@@ -6,7 +6,7 @@ html
     link(rel="stylesheet", href="/vendor/foundation-sites/dist/css/foundation.css")
     link(rel="stylesheet", href="/vendor/font-awesome/css/font-awesome.css")
     link(rel="stylesheet", href="/dist/styles.css")
-    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png")    
   body
     include ./partials/_side_menu.jade
     include ./partials/_menu.jade
@@ -14,5 +14,14 @@ html
       block content
       include ./partials/_footer.jade
     script(src="/vendor/jquery/dist/jquery.js")
+    script(src="/vendor/slick-carousel/slick/slick.js")
     script(src="/vendor/foundation-sites/dist/js/foundation.min.js")
     script(src="/dist/built.js")
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-93921947-1', 'auto');
+      ga('send', 'pageview');

@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: [{
-              src: ["public/javascripts/main.js"],
+              src: ["public/javascripts/*.js"],
               dest: "public/dist/built.js"
             }]
         }
@@ -37,14 +37,19 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['**/*.js', '**/*.sass'],
-        tasks: ['build'],
+        tasks: ['build', 'concat'],
         options: {
-          spawn: true,
-          livereload: {
-            host: 'localhost',
-            port: 5000
-          }
+          spawn: true
         },
+      },
+    },
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['public/javascripts/*.js'],
+        dest: 'public/dist/built.js',
       },
     }
   });
@@ -57,7 +62,8 @@ module.exports = function(grunt) {
 
   // Watch task
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('build', ['babel', 'sass']);
+  grunt.registerTask('build', ['babel', 'sass','concat']);
 
 };

@@ -1,15 +1,34 @@
 .position-header
-  margin-top: 70px
-  padding: 0 100px 9px
-  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
   background-color: $lighter-gray
-
-  h1
-    height: 460px
-    background-position: center
-    background-repeat: no-repeat
-    background-image: url('../images/open-positions.png')
-    background-size: 100%
+  .wrap-square
+    width: 40%
+    margin: 0 auto
+    text-align: center
+    margin-top: 20px
+    .in-wrap-square
+      border: 30px solid $open-position-color
+      padding: 30px
+      background-color: white
+      position: relative
+      overflow: hidden
+      h2
+        position: absolute
+        width: 100%
+        bottom: -60px
+        left: 0
+        font-weight: 100
+        color: $orange-color
+        margin-top: 10px
+        transform: translateY(150px)
+      h1
+        color: $open-position-color
+        font-weight: bold
+        font-size: 70px
+        margin: 0
+        line-height: 80px
 
 
 .we-want-you
@@ -167,6 +186,15 @@
     letter-spacing: 1px
 
 @media screen and (max-width: $break-large)
+
+  .position-header
+    .wrap-square
+      width: 50%
+      .in-wrap-square
+        h1
+          font-size: 45px
+          line-height: 50px
+
   .requirements
     &-section
       display: inline-block
@@ -175,22 +203,38 @@
       .profiles-container
         margin: auto
         width: 100%
+        text-align: center
         span
-          font-size: 35px
+          font-size: 25px
         .bold
-          font-size: 40px
+          font-size: 30px
       .github
         background-color: #bdbdbd
         &-container
           width: 100%
+          text-align: center
           .left-side-strip
-            width: 80%
+            width: 100%
+            span
+              display: block
+              width: 100%
+              font-size: 20px
           .right-side-strip
-            width: 20%
+            width: 100%
+            img
+              max-width: 100px
 
 @media screen and (max-width: $break-small)
+
   .position-header
     padding: 0
+    .wrap-square
+      width: 95%
+      .in-wrap-square
+        border-width: 20px
+        h1
+          font-size: 35px
+          line-height: 40px
 
   .requirements
     display: block
@@ -200,7 +244,16 @@
       width: 100%
       min-height: 200px
 
+  .our-hiring-process-icons-item
+    height: auto
+
   .our-hiring-process
     h2
       text-align: center
       padding: 0
+      .sub
+        font-size: 40px
+      span
+        &:last-child
+          font-size: 60px
+          font-weight: bold

@@ -1,6 +1,7 @@
 extends ../layout
 
 block content
+  link(rel='stylesheet', href='vendor/slick-carousel/slick/slick.css')
   header#who-header
     div.wrapper.wrapper-12
       div.block
@@ -56,7 +57,7 @@ block content
     div.wrapper.wrapper-12
       div.center
         h4 ¡Conócenos!
-      ul.list-videos
+      ul.list-videos.slider-slick
         each video, i in videos
           li
             a(href="https://www.youtube.com/watch?v=#{video.snippet.resourceId.videoId}" style="background-image: url('#{video.snippet.thumbnails.standard.url}')" class="coverimage wrap-img")
@@ -87,8 +88,3 @@ block content
           address San Luis Potosí 196 int. 401 <br> Col. Roma Norte Del. Cuahutémoc Mexico, D.F. 06700 <br> +52 (55) 6388-6650
         div.block.third
           address Calle 2da 2016 <br> Col. Centro Chihuahua, Chihuahua, México 31000 <br> +52 (614) 259-3974
-
-
-
-
-

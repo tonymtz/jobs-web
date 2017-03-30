@@ -7,11 +7,17 @@
       $('body').toggleClass('active-menu');
     });
 
+    $("#toggleCalendar").click((e) => {
+      e.preventDefault();
+      $(this).toggleClass("active");
+      $(".toggleCalendar").slideToggle();
+    });
+
     $(document).foundation();
     var windowHeight = $(window).height();
     var height = windowHeight - $('.top-menu').height();
     $('.stretch-height').height(height);
-    $('.stretch-height-with').height(windowHeight);    
+    $('.stretch-height-with').height(windowHeight);
 
     $(window).scroll((e) => {
       var windowTop = $(window).scrollTop();
@@ -25,11 +31,9 @@
       $.each(blocks, (i, e) => {
         var vel = $(e).data('vel');
         var finalTopPosition = vel * windowTop;
-        console.log(finalTopPosition);
         $(e).css({'top': -finalTopPosition+"px"});
       });
     }
-
 
   });
 })();
