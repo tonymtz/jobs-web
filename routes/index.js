@@ -11,7 +11,6 @@ router.get('/', function(req, res, next) {
   fs.readFile("util/news.json", 'utf8', (err, data) => {
     if(err) throw err;
     var news = JSON.parse(data);
-    console.log(news);
     res.render('pages/home', { title: 'Nearsoft Home', news: news});
   });
 
