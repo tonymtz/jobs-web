@@ -15,18 +15,6 @@ router.get('/', function(req, res, next) {
     res.render('pages/home', { title: 'Nearsoft Home', news: news});
   });
 
-
-  // if (req.query.code) {
-  //   GoogleCalendar.saveCode(req.query.code).then((message) => {
-  //     console.log(message);
-  //     res.redirect("/");
-  //   }).catch((err) => {
-  //     console.log(err);
-  //     res.render('pages/home', { title: 'Nearsoft Home' });
-  //   });
-  // } else {
-  //   res.render('pages/home', { title: 'Nearsoft Home' });
-  // }
 });
 
 router.get('/contact', function(req, res, next) {
@@ -129,25 +117,6 @@ router.get('/community', function(req, res, next) {
 
   res.render("pages/community", {title: "NS Community", images: images, CALENDARID: GoogleCalendar.CALENDARID});
 
-
-  // GoogleCalendar.loadCalendar().then((events) => {
-  //   var event = {}
-  //   if(events.length) {
-  //     var date = new Date(Date.parse(events[0].start["dateTime"]));
-  //     var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-  //     event = {
-  //       title: events[0].summary,
-  //       month: months[date.getMonth()],
-  //       day: date.getDate()
-  //     };
-  //   }
-  // }).catch((err) => {
-  //   console.log("here");
-  //   var event = {};
-  //   // res.render('pages/community', { title: 'Nearsoft Community', event: event, CALENDARID: GoogleCalendar.CALENDARID, images:images });
-  // }).finally(() => {
-  //   // res.render('pages/community', { title: 'Nearsoft Community', event: [], CALENDARID: GoogleCalendar.CALENDARID, images:images });
-  // });
 });
 
 router.get('/open-position', (req, res, next) => {
