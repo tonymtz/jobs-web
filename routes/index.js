@@ -11,25 +11,25 @@ router.get('/', function(req, res, next) {
   fs.readFile("util/news.json", 'utf8', (err, data) => {
     if(err) throw err;
     var news = JSON.parse(data);
-    res.render('pages/home', { title: 'Nearsoft Home', news: news});
+    res.render('pages/home', { title: 'Nearsoft Jobs | Home', news: news});
   });
 
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('pages/contact', { title: 'Nearsoft Contact' });
+  res.render('pages/contact', { title: 'Nearsoft Jobs | Contact' });
 });
 
 router.get('/internship', function(req, res, next) {
-  res.render('pages/internship', { title: 'Nearsoft Internship' });
+  res.render('pages/internship', { title: 'Nearsoft Jobs | Internship' });
 });
 
 router.get('/labs', function(req, res, next) {
-  res.render('pages/labs', { title: 'Nearsoft Labs' });
+  res.render('pages/labs', { title: 'Nearsoft Jobs | Labs' });
 });
 
 router.get('/life', function(req, res, next) {
-  res.render('pages/life', { title: 'Nearsoft Life' });
+  res.render('pages/life', { title: 'Nearsoft Jobs | Life' });
 });
 
 router.get('/community', function(req, res, next) {
@@ -114,12 +114,12 @@ router.get('/community', function(req, res, next) {
   ];
 
 
-  res.render("pages/community", {title: "NS Community", images: images, CALENDARID: GoogleCalendar.CALENDARID});
+  res.render("pages/community", {title: "Nearsoft Jobs | Community", images: images, CALENDARID: GoogleCalendar.CALENDARID});
 
 });
 
 router.get('/open-position', (req, res, next) => {
-  res.render('pages/position', { title: 'Nearsoft Open Positions' });
+  res.render('pages/position', { title: 'Nearsoft Jobs | Open Positions' });
 });
 
 router.get('/who-we-are', (req, res, next) => {
@@ -131,7 +131,7 @@ router.get('/who-we-are', (req, res, next) => {
     if (err) {
       res.render("error", { error: err, title: 'Error' });
     } else {
-      res.render('pages/who', { title: 'Nearsoft This is Who We Are', videos: response.items });
+      res.render('pages/who', { title: 'Nearsoft Jobs | This is Who We Are', videos: response.items });
     }
   });
 
